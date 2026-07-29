@@ -35,172 +35,273 @@
 
       <!-- Navigation Tabs (Right Side) -->
       <nav class="nav-tabs">
-        <a href="#home" class="nav-tab active">Home</a>
-        <a href="#news" class="nav-tab">News</a>
-        <a href="#about" class="nav-tab">About</a>
-        <a href="#research" class="nav-tab">Research</a>
-        <a href="#courses" class="nav-tab">Courses</a>
-        <a href="#people" class="nav-tab">People</a>
-        <a href="#publications" class="nav-tab">Publications</a>
+        <button class="nav-tab active" data-section="home">Home</button>
+        <button class="nav-tab" data-section="news">News</button>
+        <button class="nav-tab" data-section="about">About</button>
+        <button class="nav-tab" data-section="research">Research</button>
+        <button class="nav-tab" data-section="courses">Courses</button>
+        <button class="nav-tab" data-section="people">People</button>
+        <button class="nav-tab" data-section="publications">Publications</button>
       </nav>
     </div>
   </header>
 
-  <!-- 3. PUBLICATIONS SECTION -->
-  <section id="publications" class="section">
-    <div class="section-container">
-      <div class="section-header">
+  <!-- 3. PAGE SECTIONS (Only the active section is visible) -->
+  <main class="main-content">
+    
+    <!-- HOME SECTION -->
+    <section id="sec-home" class="page-section active">
+      <div class="section-container">
+        <div class="hero-box">
+          <h2 class="hero-heading">Welcome to AIM Lab</h2>
+          <p class="hero-text">
+            The <strong>AeroAstro Intelligent Mechanics Lab (AIM Lab)</strong> at New Mexico State University specializes in astrodynamics, space mission design, optical navigation, and physics-informed machine learning.
+          </p>
+          <div class="pi-brief">
+            <h3>Principal Investigator</h3>
+            <p><strong>Prof. Sungmoon Choi</strong> — Assistant Professor, Department of Mechanical and Aerospace Engineering</p>
+            <p>Email: <a href="mailto:sungmoon@nmsu.edu">sungmoon@nmsu.edu</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWS SECTION -->
+    <section id="sec-news" class="page-section">
+      <div class="section-container">
+        <h2 class="section-title">News & Announcements</h2>
+        <div class="section-divider"></div>
+        <ul class="news-list">
+          <li><strong>[2026.08]</strong> Prof. Sungmoon Choi joins NMSU MAE Department as Assistant Professor!</li>
+          <li><strong>[2026.05]</strong> New paper on Vectorized Dynamic-Size Genetic Algorithm published in <em>Astrodynamics</em>.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="sec-about" class="page-section">
+      <div class="section-container">
+        <h2 class="section-title">About AIM Lab</h2>
+        <div class="section-divider"></div>
+        <p>AIM Lab investigates fundamental and applied problems in orbital mechanics, space mission trajectory optimization, and autonomous deep-space navigation.</p>
+      </div>
+    </section>
+
+    <!-- RESEARCH SECTION -->
+    <section id="sec-research" class="page-section">
+      <div class="section-container">
+        <h2 class="section-title">Research Thrusts</h2>
+        <div class="section-divider"></div>
+        <div class="research-grid">
+          <div class="research-card">
+            <h3>Astrodynamics & Mission Design</h3>
+            <p>Multi-gravity assist tour design, trajectory optimization, low-thrust shape-based formulations.</p>
+          </div>
+          <div class="research-card">
+            <h3>AI & Physics-Informed ML</h3>
+            <p>PINNs for CRTBP, neural network-based Lambert's problem solvers, reinforcement learning.</p>
+          </div>
+          <div class="research-card">
+            <h3>Optical Navigation</h3>
+            <p>Angles-only deep-space initial orbit determination and geometric state estimation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COURSES SECTION -->
+    <section id="sec-courses" class="page-section">
+      <div class="section-container">
+        <h2 class="section-title">Courses & Teaching</h2>
+        <div class="section-divider"></div>
+        <ul class="course-list">
+          <li><strong>Orbital Mechanics</strong> — Department of Mechanical & Aerospace Engineering</li>
+          <li><strong>System Engineering</strong> — Department of Mechanical & Aerospace Engineering</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PEOPLE SECTION -->
+    <section id="sec-people" class="page-section">
+      <div class="section-container">
+        <h2 class="section-title">Lab Members</h2>
+        <div class="section-divider"></div>
+        <div class="people-card">
+          <h3>Sungmoon Choi, Ph.D.</h3>
+          <p>Assistant Professor & Lab Director</p>
+          <p>Department of Mechanical & Aerospace Engineering, NMSU</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS SECTION (TREE STRUCTURE) -->
+    <section id="sec-publications" class="page-section">
+      <div class="section-container">
         <h2 class="section-title">Publications</h2>
         <div class="section-divider"></div>
-      </div>
 
-      <!-- Tree Tabs under Publications -->
-      <div class="pub-tree-tabs">
-        <button class="pub-tree-btn active" data-target="journal">Journal Papers</button>
-        <button class="pub-tree-btn" data-target="conference">Conference Proceedings</button>
-        <button class="pub-tree-btn" data-target="poster">Poster Presentations</button>
-      </div>
+        <!-- TREE STRUCTURE BELOW PUBLICATIONS -->
+        <div class="tree-navigation">
+          <div class="tree-root">Publications Tree</div>
+          <div class="tree-branches">
+            <button class="tree-btn active" data-target="journal">
+              <span class="branch-symbol">├──</span> Journal Papers
+            </button>
+            <button class="tree-btn" data-target="conference">
+              <span class="branch-symbol">├──</span> Conference Proceedings
+            </button>
+            <button class="tree-btn" data-target="poster">
+              <span class="branch-symbol">└──</span> Poster Presentations
+            </button>
+          </div>
+        </div>
 
-      <!-- Journal Papers Category -->
-      <div class="pub-category active" id="cat-journal">
-        <ol class="pub-list">
-          <li class="pub-item">
-            <span class="pub-tag">[J3]</span>
-            <div class="pub-content">
-              <span class="pub-authors"><strong>Choi, S.</strong>, Das-Stuart, A., Anderson, R. L., & Abdelkhalik, O. (2026).</span>
-              <span class="pub-paper-title">Vectorized dynamic-size genetic algorithm for rapid generation of optimal and suboptimal flyby sequences.</span>
-              <span class="pub-venue"><em>Astrodynamics</em>, 1-24.</span>
-              <a href="https://doi.org/10.1007/s42064-026-0317-5" target="_blank" class="pub-link">[DOI]</a>
-            </div>
-          </li>
-          <li class="pub-item">
-            <span class="pub-tag">[J2]</span>
-            <div class="pub-content">
-              <span class="pub-authors"><strong>Choi, S.</strong>, Negrete, A., Abdelkhalik, O., Servadio, S., & Lee, D. D. (2026).</span>
-              <span class="pub-paper-title">Ambiguity-Free Geometric Approach to Deep-Space Navigation Using Angles-Only Measurements.</span>
-              <span class="pub-venue"><em>Journal of Guidance, Control, and Dynamics</em>, 1-14.</span>
-              <a href="https://doi.org/10.2514/1.G009699" target="_blank" class="pub-link">[DOI]</a>
-            </div>
-          </li>
-          <li class="pub-item">
-            <span class="pub-tag">[J1]</span>
-            <div class="pub-content">
-              <span class="pub-authors"><strong>Choi, S.</strong>, Abdelkhalik, O., & He, P. (2025).</span>
-              <span class="pub-paper-title">Multidisciplinary optimization of end-to-end Mars aerobraking trajectory and spacecraft design.</span>
-              <span class="pub-venue"><em>Advances in Space Research</em>, 75(11), 8065-8083.</span>
-              <a href="http://dx.doi.org/10.1016/j.asr.2025.03.022" target="_blank" class="pub-link">[DOI]</a>
-            </div>
-          </li>
-        </ol>
-      </div>
+        <!-- Journal Papers Category -->
+        <div class="pub-category active" id="cat-journal">
+          <h3 class="cat-heading">Journal Papers</h3>
+          <ol class="pub-list">
+            <li class="pub-item">
+              <span class="pub-tag">[J3]</span>
+              <div class="pub-content">
+                <span class="pub-authors"><strong>Choi, S.</strong>, Das-Stuart, A., Anderson, R. L., & Abdelkhalik, O. (2026).</span>
+                <span class="pub-paper-title">Vectorized dynamic-size genetic algorithm for rapid generation of optimal and suboptimal flyby sequences.</span>
+                <span class="pub-venue"><em>Astrodynamics</em>, 1-24.</span>
+                <a href="https://doi.org/10.1007/s42064-026-0317-5" target="_blank" class="pub-link">[DOI]</a>
+              </div>
+            </li>
+            <li class="pub-item">
+              <span class="pub-tag">[J2]</span>
+              <div class="pub-content">
+                <span class="pub-authors"><strong>Choi, S.</strong>, Negrete, A., Abdelkhalik, O., Servadio, S., & Lee, D. D. (2026).</span>
+                <span class="pub-paper-title">Ambiguity-Free Geometric Approach to Deep-Space Navigation Using Angles-Only Measurements.</span>
+                <span class="pub-venue"><em>Journal of Guidance, Control, and Dynamics</em>, 1-14.</span>
+                <a href="https://doi.org/10.2514/1.G009699" target="_blank" class="pub-link">[DOI]</a>
+              </div>
+            </li>
+            <li class="pub-item">
+              <span class="pub-tag">[J1]</span>
+              <div class="pub-content">
+                <span class="pub-authors"><strong>Choi, S.</strong>, Abdelkhalik, O., & He, P. (2025).</span>
+                <span class="pub-paper-title">Multidisciplinary optimization of end-to-end Mars aerobraking trajectory and spacecraft design.</span>
+                <span class="pub-venue"><em>Advances in Space Research</em>, 75(11), 8065-8083.</span>
+                <a href="http://dx.doi.org/10.1016/j.asr.2025.03.022" target="_blank" class="pub-link">[DOI]</a>
+              </div>
+            </li>
+          </ol>
+        </div>
 
-      <!-- Conference Proceedings Category -->
-      <div class="pub-category" id="cat-conference">
-        <ol class="pub-list">
-          <li class="pub-item">
-            <span class="pub-tag">[C12]</span>
-            <div class="pub-content">
-              <span class="pub-authors"><strong>Choi, S.</strong>, Abdelkhalik, O., Servadio, S., & Lee, D. (2026).</span>
-              <span class="pub-paper-title">Deep-Space Initial Orbit Determination from Angles-Only Measurements Without Prior Attitude or Distance Information.</span>
-              <span class="pub-venue">In <em>AIAA/AAS Astrodynamics Specialist Conference</em>.</span>
-            </div>
-          </li>
-          <li class="pub-item">
-            <span class="pub-tag">[C11]</span>
-            <div class="pub-content">
-              <span class="pub-authors"><strong>Choi, S.</strong>, Gibson, T., & Abdelkhalik, O. (2025).</span>
-              <span class="pub-paper-title">Learning-Based Placement of Deep Space Maneuvers in the Rendezvous Problem.</span>
-              <span class="pub-venue">In <em>Daniele Mortari Astronautics Symposium</em>.</span>
-            </div>
-          </li>
-          <li class="pub-item">
-            <span class="pub-tag">[C10]</span>
-            <div class="pub-content">
-              <span class="pub-authors">Negrete, A., <strong>Choi, S.</strong>, & Abdelkhalik, O. (2025).</span>
-              <span class="pub-paper-title">Shape-based Approximation for Low-Thrust Spacecraft Trajectory Using Chebyshev Polynomials.</span>
-              <span class="pub-venue">In <em>Daniele Mortari Astronautics Symposium</em>.</span>
-            </div>
-          </li>
-          <li class="pub-item">
-            <span class="pub-tag">[C9]</span>
-            <div class="pub-content">
-              <span class="pub-authors"><strong>Choi, S.</strong>, & Abdelkhalik, O. (2025).</span>
-              <span class="pub-paper-title">Shape-based Low-Thrust ΔV Prediction Using Deep Neural Networks.</span>
-              <span class="pub-venue">In <em>Daniele Mortari Astronautics Symposium</em>.</span>
-            </div>
-          </li>
-          <li class="pub-item">
-            <span class="pub-tag">[C8]</span>
-            <div class="pub-content">
-              <span class="pub-authors"><strong>Choi, S.</strong>, Das-Stuart, A., Anderson, R. L., & Abdelkhalik, O. (2025).</span>
-              <span class="pub-paper-title">Reinforcement Learning for Multiple Gravity Assist Trajectory Optimization.</span>
-              <span class="pub-venue">In <em>76th International Astronautical Congress (IAC 2025)</em>.</span>
-            </div>
-          </li>
-          <li class="pub-item">
-            <span class="pub-tag">[C7]</span>
-            <div class="pub-content">
-              <span class="pub-authors"><strong>Choi, S.</strong>, Abdelkhalik, O., Das-Stuart, A., & Anderson, R. L. (2025).</span>
-              <span class="pub-paper-title">Neural Network-Based Universal Variable Approximation for Lambert's Problem.</span>
-              <span class="pub-venue">In <em>AIAA/AAS Space Flight Mechanics Meeting</em>.</span>
-            </div>
-          </li>
-          <li class="pub-item">
-            <span class="pub-tag">[C6]</span>
-            <div class="pub-content">
-              <span class="pub-authors"><strong>Choi, S.</strong>, Abdelkhalik, O., & He, P. (2025).</span>
-              <span class="pub-paper-title">Multidisciplinary Optimization of End-to-End Mars Aerobraking Trajectory and Spacecraft Design.</span>
-              <span class="pub-venue">In <em>AIAA/AAS Space Flight Mechanics Meeting</em>.</span>
-            </div>
-          </li>
-        </ol>
-      </div>
+        <!-- Conference Proceedings Category -->
+        <div class="pub-category" id="cat-conference">
+          <h3 class="cat-heading">Conference Proceedings</h3>
+          <ol class="pub-list">
+            <li class="pub-item">
+              <span class="pub-tag">[C12]</span>
+              <div class="pub-content">
+                <span class="pub-authors"><strong>Choi, S.</strong>, Abdelkhalik, O., Servadio, S., & Lee, D. (2026).</span>
+                <span class="pub-paper-title">Deep-Space Initial Orbit Determination from Angles-Only Measurements Without Prior Attitude or Distance Information.</span>
+                <span class="pub-venue">In <em>AIAA/AAS Astrodynamics Specialist Conference</em>.</span>
+              </div>
+            </li>
+            <li class="pub-item">
+              <span class="pub-tag">[C11]</span>
+              <div class="pub-content">
+                <span class="pub-authors"><strong>Choi, S.</strong>, Gibson, T., & Abdelkhalik, O. (2025).</span>
+                <span class="pub-paper-title">Learning-Based Placement of Deep Space Maneuvers in the Rendezvous Problem.</span>
+                <span class="pub-venue">In <em>Daniele Mortari Astronautics Symposium</em>.</span>
+              </div>
+            </li>
+            <li class="pub-item">
+              <span class="pub-tag">[C10]</span>
+              <div class="pub-content">
+                <span class="pub-authors">Negrete, A., <strong>Choi, S.</strong>, & Abdelkhalik, O. (2025).</span>
+                <span class="pub-paper-title">Shape-based Approximation for Low-Thrust Spacecraft Trajectory Using Chebyshev Polynomials.</span>
+                <span class="pub-venue">In <em>Daniele Mortari Astronautics Symposium</em>.</span>
+              </div>
+            </li>
+            <li class="pub-item">
+              <span class="pub-tag">[C9]</span>
+              <div class="pub-content">
+                <span class="pub-authors"><strong>Choi, S.</strong>, & Abdelkhalik, O. (2025).</span>
+                <span class="pub-paper-title">Shape-based Low-Thrust ΔV Prediction Using Deep Neural Networks.</span>
+                <span class="pub-venue">In <em>Daniele Mortari Astronautics Symposium</em>.</span>
+              </div>
+            </li>
+            <li class="pub-item">
+              <span class="pub-tag">[C8]</span>
+              <div class="pub-content">
+                <span class="pub-authors"><strong>Choi, S.</strong>, Das-Stuart, A., Anderson, R. L., & Abdelkhalik, O. (2025).</span>
+                <span class="pub-paper-title">Reinforcement Learning for Multiple Gravity Assist Trajectory Optimization.</span>
+                <span class="pub-venue">In <em>76th International Astronautical Congress (IAC 2025)</em>.</span>
+              </div>
+            </li>
+            <li class="pub-item">
+              <span class="pub-tag">[C7]</span>
+              <div class="pub-content">
+                <span class="pub-authors"><strong>Choi, S.</strong>, Abdelkhalik, O., Das-Stuart, A., & Anderson, R. L. (2025).</span>
+                <span class="pub-paper-title">Neural Network-Based Universal Variable Approximation for Lambert's Problem.</span>
+                <span class="pub-venue">In <em>AIAA/AAS Space Flight Mechanics Meeting</em>.</span>
+              </div>
+            </li>
+            <li class="pub-item">
+              <span class="pub-tag">[C6]</span>
+              <div class="pub-content">
+                <span class="pub-authors"><strong>Choi, S.</strong>, Abdelkhalik, O., & He, P. (2025).</span>
+                <span class="pub-paper-title">Multidisciplinary Optimization of End-to-End Mars Aerobraking Trajectory and Spacecraft Design.</span>
+                <span class="pub-venue">In <em>AIAA/AAS Space Flight Mechanics Meeting</em>.</span>
+              </div>
+            </li>
+          </ol>
+        </div>
 
-      <!-- Poster Presentations Category -->
-      <div class="pub-category" id="cat-poster">
-        <ol class="pub-list">
-          <li class="pub-item">
-            <span class="pub-tag">[P4]</span>
-            <div class="pub-content">
-              <span class="pub-authors">Yi, A., Servadio, S., & <strong>Choi, S.</strong> (2026).</span>
-              <span class="pub-paper-title">Robust Deep-Space Navigation Via Four-Body Angles-Only Analysis.</span>
-              <span class="pub-venue"><em>EUReCA Summer Undergraduate Research Showcase</em>, Ames, Iowa.</span>
-            </div>
-          </li>
-          <li class="pub-item">
-            <span class="pub-tag">[P3]</span>
-            <div class="pub-content">
-              <span class="pub-authors"><strong>Choi, S.</strong>, & Abdelkhalik, O. (2025).</span>
-              <span class="pub-paper-title">Ambiguity-Free Geometrical Deep Space Navigation Using Angle-Only Measurements.</span>
-              <span class="pub-venue"><em>Iowa Space Grant Consortium Spring Research Symposium</em>, Ames, Iowa.</span>
-            </div>
-          </li>
-          <li class="pub-item">
-            <span class="pub-tag">[P2]</span>
-            <div class="pub-content">
-              <span class="pub-authors"><strong>Choi, S.</strong>, & Park, C. (2019).</span>
-              <span class="pub-paper-title">That’s One Small Step for a Man, One Giant Leap for Mankind.</span>
-              <span class="pub-venue"><em>The 2nd Astro Poster Jamboree</em>, Seoul, Korea.</span>
-            </div>
-          </li>
-          <li class="pub-item">
-            <span class="pub-tag">[P1]</span>
-            <div class="pub-content">
-              <span class="pub-authors"><strong>Choi, S.</strong>, Park, H., Park, J., Chung, Y., Held, D., & Kim, D. (2014).</span>
-              <span class="pub-paper-title">Development of Smart Traps for Asian Ambrosia Beetles.</span>
-              <span class="pub-venue"><em>UKC 2014</em>, San Francisco, CA.</span>
-            </div>
-          </li>
-        </ol>
-      </div>
-    </div>
-  </section>
+        <!-- Poster Presentations Category -->
+        <div class="pub-category" id="cat-poster">
+          <h3 class="cat-heading">Poster Presentations</h3>
+          <ol class="pub-list">
+            <li class="pub-item">
+              <span class="pub-tag">[P4]</span>
+              <div class="pub-content">
+                <span class="pub-authors">Yi, A., Servadio, S., & <strong>Choi, S.</strong> (2026).</span>
+                <span class="pub-paper-title">Robust Deep-Space Navigation Via Four-Body Angles-Only Analysis.</span>
+                <span class="pub-venue"><em>EUReCA Summer Undergraduate Research Showcase</em>, Ames, Iowa.</span>
+              </div>
+            </li>
+            <li class="pub-item">
+              <span class="pub-tag">[P3]</span>
+              <div class="pub-content">
+                <span class="pub-authors"><strong>Choi, S.</strong>, & Abdelkhalik, O. (2025).</span>
+                <span class="pub-paper-title">Ambiguity-Free Geometrical Deep Space Navigation Using Angle-Only Measurements.</span>
+                <span class="pub-venue"><em>Iowa Space Grant Consortium Spring Research Symposium</em>, Ames, Iowa.</span>
+              </div>
+            </li>
+            <li class="pub-item">
+              <span class="pub-tag">[P2]</span>
+              <div class="pub-content">
+                <span class="pub-authors"><strong>Choi, S.</strong>, & Park, C. (2019).</span>
+                <span class="pub-paper-title">That’s One Small Step for a Man, One Giant Leap for Mankind.</span>
+                <span class="pub-venue"><em>The 2nd Astro Poster Jamboree</em>, Seoul, Korea.</span>
+              </div>
+            </li>
+            <li class="pub-item">
+              <span class="pub-tag">[P1]</span>
+              <div class="pub-content">
+                <span class="pub-authors"><strong>Choi, S.</strong>, Park, H., Park, J., Chung, Y., Held, D., & Kim, D. (2014).</span>
+                <span class="pub-paper-title">Development of Smart Traps for Asian Ambrosia Beetles.</span>
+                <span class="pub-venue"><em>UKC 2014</em>, San Francisco, CA.</span>
+              </div>
+            </li>
+          </ol>
+        </div>
 
+      </div>
+    </section>
+
+  </main>
 
   <!-- JavaScript Interaction -->
   <script src="main.js"></script>
 </body>
 </html>
+
 
 
 
