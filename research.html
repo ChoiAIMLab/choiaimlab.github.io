@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Research | AIM Lab - NMSU</title>
-  <link rel="stylesheet" href="styles.css?v=1.3.9">
+  <link rel="stylesheet" href="styles.css?v=1.4.0">
 </head>
 <body>
 
@@ -180,7 +180,7 @@
         </div>
       </div>
 
-      <!-- 2. PAST PROJECTS CATEGORY (EXPANDABLE FIGURES ACCORDION) -->
+      <!-- 2. PAST PROJECTS CATEGORY (EXPANDABLE FIGURES ACCORDION + INLINE LIGHTBOX) -->
       <div class="research-category" id="cat-past">
         <h3 class="category-subtitle" style="margin-bottom: 24px;">Past Projects</h3>
 
@@ -202,15 +202,15 @@
             <div class="expandable-gallery" id="aerobraking-gallery">
               <div class="gallery-grid">
                 <div class="gallery-item">
-                  <img src="Past%20Projects/Aerobraking1.png" alt="Mars Aerobraking Figure 1" class="gallery-img">
+                  <img src="Past%20Projects/Aerobraking1.png" alt="Figure 1: Aerobraking Trajectory Optimization" class="gallery-img" onclick="openInlinePopup(this)">
                   <div class="img-caption">Figure 1: Aerobraking Trajectory Optimization</div>
                 </div>
                 <div class="gallery-item">
-                  <img src="Past%20Projects/Aerobraking2.png" alt="Mars Aerobraking Figure 2" class="gallery-img">
+                  <img src="Past%20Projects/Aerobraking2.png" alt="Figure 2: Multidisciplinary Spacecraft Design Integration" class="gallery-img" onclick="openInlinePopup(this)">
                   <div class="img-caption">Figure 2: Multidisciplinary Spacecraft Design Integration</div>
                 </div>
                 <div class="gallery-item">
-                  <img src="Past%20Projects/Aerobraking3.png" alt="Mars Aerobraking Figure 3" class="gallery-img">
+                  <img src="Past%20Projects/Aerobraking3.png" alt="Figure 3: Aerodynamic Heat Flux & Entry Bounds" class="gallery-img" onclick="openInlinePopup(this)">
                   <div class="img-caption">Figure 3: Aerodynamic Heat Flux & Entry Bounds</div>
                 </div>
               </div>
@@ -234,15 +234,15 @@
             <div class="expandable-gallery" id="vsdga-gallery">
               <div class="gallery-grid">
                 <div class="gallery-item">
-                  <img src="Past%20Projects/VSDGA0.png" alt="VSDGA Figure 1" class="gallery-img">
+                  <img src="Past%20Projects/VSDGA0.png" alt="Figure 1: Vectorized Dynamic-Size Genetic Algorithm Architecture" class="gallery-img" onclick="openInlinePopup(this)">
                   <div class="img-caption">Figure 1: Vectorized Dynamic-Size Genetic Algorithm Architecture</div>
                 </div>
                 <div class="gallery-item">
-                  <img src="Past%20Projects/VSDGA1.png" alt="VSDGA Figure 2" class="gallery-img">
+                  <img src="Past%20Projects/VSDGA1.png" alt="Figure 2: Flyby Sequence Search & Trajectory Solutions" class="gallery-img" onclick="openInlinePopup(this)">
                   <div class="img-caption">Figure 2: Flyby Sequence Search & Trajectory Solutions</div>
                 </div>
                 <div class="gallery-item">
-                  <img src="Past%20Projects/VSDGA2.png" alt="VSDGA Figure 3" class="gallery-img">
+                  <img src="Past%20Projects/VSDGA2.png" alt="Figure 3: GPU Neural Network Lambert Speedup Comparison" class="gallery-img" onclick="openInlinePopup(this)">
                   <div class="img-caption">Figure 3: GPU Neural Network Lambert Speedup Comparison</div>
                 </div>
               </div>
@@ -255,14 +255,41 @@
     </div>
   </main>
 
-  <!-- IMAGE LIGHTBOX MODAL OVERLAY -->
-  <div id="image-modal" class="image-modal-overlay">
-    <span class="modal-close">&times;</span>
-    <img class="modal-content" id="modal-img" alt="Enlarged Figure">
-    <div id="modal-caption" class="modal-caption"></div>
+  <!-- INLINE LIGHTBOX MODAL OVERLAY -->
+  <div id="inline-lightbox" class="image-modal-overlay" onclick="closeInlinePopup(event)">
+    <span class="modal-close" onclick="closeInlinePopupDirect()">&times;</span>
+    <img class="modal-content" id="popup-image" alt="Enlarged Figure" onclick="event.stopPropagation()">
+    <div id="popup-caption" class="modal-caption" onclick="event.stopPropagation()"></div>
   </div>
 
-  <script src="main.js?v=1.0.3"></script>
+  <script>
+    function openInlinePopup(element) {
+      var modal = document.getElementById('inline-lightbox');
+      var img = document.getElementById('popup-image');
+      var caption = document.getElementById('popup-caption');
+      img.src = element.src;
+      caption.innerText = element.alt || '';
+      modal.style.display = 'flex';
+    }
+
+    function closeInlinePopup(event) {
+      var modal = document.getElementById('inline-lightbox');
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    }
+
+    function closeInlinePopupDirect() {
+      document.getElementById('inline-lightbox').style.display = 'none';
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        document.getElementById('inline-lightbox').style.display = 'none';
+      }
+    });
+  </script>
+
+  <script src="main.js?v=1.0.4"></script>
 </body>
 </html>
-
