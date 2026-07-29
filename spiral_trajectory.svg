@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="32" height="32">
+  <!-- Central Body (Planet/Sun) -->
+  <circle cx="50" cy="50" r="7" fill="#880029" />
+  
+  <!-- Multi-turn Low-Thrust Spiral Trajectory -->
+  <path d="
+    M 50 50 
+    A 3 3 0 0 1 53 50 
+    A 6 6 0 0 1 44 50 
+    A 10 10 0 0 1 54 50 
+    A 15 15 0 0 1 35 50 
+    A 21 21 0 0 1 56 50 
+    A 28 28 0 0 1 22 50 
+    A 35 35 0 0 1 85 50
+  " fill="none" stroke="#880029" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="100" stroke-dashoffset="0">
+    <animate attributeName="stroke-dashoffset" from="100" to="0" dur="4s" repeatCount="indefinite"/>
+  </path>
+  
+  <!-- Target Spacecraft Node at Outer Spiral Tip -->
+  <circle cx="85" cy="50" r="3.5" fill="#0f172a" />
+  <!-- Thrust Direction Vector -->
+  <polygon points="85,46 92,50 85,54" fill="#880029" />
+</svg>
