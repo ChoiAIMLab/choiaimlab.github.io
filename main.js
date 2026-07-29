@@ -1,4 +1,4 @@
-// AIM Lab Interactive Logic (Publications, People & Research Category Switching + Expandable Galleries)
+// AIM Lab Interactive Logic (Publications, People & Research Category Switching + Expandable Galleries & Lightbox Modal)
 document.addEventListener('DOMContentLoaded', () => {
 
   // 1. Publications Category Switcher
@@ -59,14 +59,51 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 4. Image Lightbox Zoom View
+  // 4. Image Lightbox Modal View (In-page enlarged overlay view)
   const galleryImgs = document.querySelectorAll('.gallery-img');
-  galleryImgs.forEach(img => {
-    img.addEventListener('click', (e) => {
-      e.stopPropagation();
-      window.open(img.getAttribute('src'), '_blank');
+  const imageModal = document.getElementById('image-modal');
+  const modalImg = document.getElementById('modal-img');
+  const modalCaption = document.getElementById('modal-caption');
+  const modalClose = document.querySelector('.modal-close');
+
+  if (imageModal && modalImg) {
+    galleryImgs.forEach(img => {
+      img.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const imgSrc = img.getAttribute('src');
+        const imgAlt = img.getAttribute('alt') || 'Project Figure';
+        const parentItem = img.closest('.gallery-item');
+        const captionText = parentItem ? parentItem.querySelector('.img-caption')?.innerText : imgAlt;
+
+        modalImg.src = imgSrc;
+        if (modalCaption) {
+          modalCaption.innerText = captionText;
+        }
+        imageModal.classList.add('active');
+      });
     });
-  });
+
+    // Close when clicking Close button
+    if (modalClose) {
+      modalClose.addEventListener('click', () => {
+        imageModal.classList.remove('active');
+      });
+    }
+
+    // Close when clicking anywhere outside of the image (overlay background)
+    imageModal.addEventListener('click', (e) => {
+      if (e.target !== modalImg) {
+        imageModal.classList.remove('active');
+      }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && imageModal.classList.contains('active')) {
+        imageModal.classList.remove('active');
+      }
+    });
+  }
 
   // 5. People Sub-Menu Smooth Anchor Scrolling & Active Highlighting on Scroll
   const peopleSubBtns = document.querySelectorAll('.tree-branches a[href^="#"]');
