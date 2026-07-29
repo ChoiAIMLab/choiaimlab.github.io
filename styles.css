@@ -1,4 +1,4 @@
-/* Modern Styling for NMSU Header & AIM Lab Navigation Tabs */
+/* Modern Styling for NMSU Header, AIM Lab Navigation Tabs & Publications */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap');
 
 :root {
@@ -21,7 +21,7 @@ body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   background-color: var(--bg-light);
   color: var(--text-main);
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 /* 1. Top Institution Header (NMSU Crimson Bar) */
@@ -64,7 +64,6 @@ body {
   opacity: 0.92;
   transform: scale(1.03);
 }
-
 
 .institution-text {
   display: flex;
@@ -148,12 +147,12 @@ body {
   margin-top: 4px;
 }
 
-/* Navigation Tabs (Far-Right Alignment, Wide Spacing, Crimson Font Color) */
+/* Navigation Tabs & Dropdown Tree Menu */
 .nav-tabs {
   display: flex;
   align-items: center;
-  gap: 34px; /* Generous wide spacing between tabs */
-  margin-left: auto; /* Push navigation completely to the far right */
+  gap: 34px;
+  margin-left: auto;
   justify-content: flex-end;
 }
 
@@ -162,11 +161,13 @@ body {
   font-family: 'Outfit', 'Inter', sans-serif;
   font-weight: 700;
   font-size: 1.08rem;
-  color: var(--nmsu-crimson); /* NMSU Crimson Red font color */
+  color: var(--nmsu-crimson);
   padding: 8px 16px;
   border-radius: 8px;
   transition: all 0.25s ease;
-  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .nav-tab:hover {
@@ -183,13 +184,195 @@ body {
   box-shadow: 0 4px 14px rgba(136, 0, 41, 0.35);
 }
 
-/* Responsive tweaking */
-@media (max-width: 1120px) {
-  .nav-tabs {
-    gap: 20px;
-  }
+/* Dropdown Tree Styling */
+.dropdown {
+  position: relative;
+  display: inline-block;
 }
 
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #ffffff;
+  min-width: 240px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  padding: 8px 0;
+  z-index: 1000;
+  margin-top: 6px;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-item {
+  color: var(--text-main);
+  padding: 10px 20px;
+  text-decoration: none;
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background-color: var(--nmsu-crimson-light);
+  color: var(--nmsu-crimson);
+}
+
+/* 3. Publications Section */
+.section {
+  padding: 70px 0;
+}
+
+.section-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.section-header {
+  margin-bottom: 35px;
+}
+
+.section-tag {
+  color: var(--nmsu-crimson);
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.section-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--space-dark);
+}
+
+/* Publication Sub-Tabs */
+.pub-subtabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.pub-tab-btn {
+  background-color: #ffffff;
+  border: 1.5px solid #cbd5e1;
+  color: var(--text-main);
+  padding: 10px 20px;
+  border-radius: 24px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.pub-tab-btn:hover, .pub-tab-btn.active {
+  background-color: var(--nmsu-crimson);
+  border-color: var(--nmsu-crimson);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(136, 0, 41, 0.2);
+}
+
+/* Publication List & Cards */
+.pub-category {
+  margin-bottom: 45px;
+}
+
+.pub-category-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--space-dark);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.badge {
+  background-color: var(--nmsu-crimson);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+.pub-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pub-item {
+  background-color: #ffffff;
+  padding: 20px 24px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  display: flex;
+  gap: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pub-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  border-color: rgba(136, 0, 41, 0.3);
+}
+
+.pub-tag {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  color: var(--nmsu-crimson);
+  font-size: 1rem;
+  min-width: 45px;
+}
+
+.pub-content {
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.pub-authors {
+  color: var(--text-main);
+}
+
+.pub-paper-title {
+  font-weight: 700;
+  color: var(--space-dark);
+  margin: 0 4px;
+}
+
+.pub-venue {
+  color: var(--text-muted);
+}
+
+.pub-link {
+  color: var(--nmsu-crimson);
+  font-weight: 700;
+  text-decoration: none;
+  margin-left: 6px;
+}
+
+.pub-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive tweaking */
 @media (max-width: 960px) {
   .lab-container {
     flex-direction: column;
@@ -202,30 +385,5 @@ body {
     justify-content: flex-start;
     gap: 14px;
     flex-wrap: wrap;
-  }
-  .nav-tab {
-    padding: 6px 12px;
-    font-size: 0.95rem;
-  }
-}
-
-@media (max-width: 640px) {
-  .institution-container, .lab-container {
-    padding: 0 20px;
-  }
-  .nmsu-logo {
-    height: 40px;
-  }
-  .institution-name {
-    font-size: 0.9rem;
-  }
-  .department-name {
-    font-size: 0.76rem;
-  }
-  .lab-title {
-    font-size: 2.2rem;
-  }
-  .lab-subtitle {
-    font-size: 1rem;
   }
 }
