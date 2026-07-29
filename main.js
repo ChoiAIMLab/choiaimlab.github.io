@@ -1,4 +1,4 @@
-// AIM Lab Interactive Logic (Publications Category Switching & People Smooth Scroll)
+// AIM Lab Interactive Logic (Publications, People & Research Category Switching)
 document.addEventListener('DOMContentLoaded', () => {
 
   // 1. Publications Category Switcher
@@ -21,7 +21,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 2. People Sub-Menu Smooth Anchor Scrolling & Active Highlighting on Scroll
+  // 2. Research Category Switcher (Current Research Projects vs Past Projects)
+  const researchTreeBtns = document.querySelectorAll('.research-category-btn');
+  const researchCategories = document.querySelectorAll('.research-category');
+
+  researchTreeBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetCat = btn.getAttribute('data-target');
+      researchTreeBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      researchCategories.forEach(cat => {
+        if (cat.getAttribute('id') === `cat-${targetCat}`) {
+          cat.classList.add('active');
+        } else {
+          cat.classList.remove('active');
+        }
+      });
+    });
+  });
+
+  // 3. People Sub-Menu Smooth Anchor Scrolling & Active Highlighting on Scroll
   const peopleSubBtns = document.querySelectorAll('.tree-branches a[href^="#"]');
   const peopleSections = document.querySelectorAll('.people-section');
 

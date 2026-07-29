@@ -408,11 +408,11 @@ body {
   padding-bottom: 8px;
 }
 
-.pub-category {
+.pub-category, .people-category, .research-category {
   display: none;
 }
 
-.pub-category.active {
+.pub-category.active, .people-category.active, .research-category.active {
   display: block;
 }
 
