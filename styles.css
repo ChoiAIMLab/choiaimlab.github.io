@@ -330,7 +330,7 @@ body {
   margin-bottom: 10px;
 }
 
-/* 4. PUBLICATIONS CATEGORIES STRUCTURE BELOW PUBLICATIONS HEADER */
+/* 4. CATEGORIES STRUCTURE */
 .tree-container {
   background-color: #ffffff;
   border: 1.5px solid #e2e8f0;
@@ -407,11 +407,11 @@ body {
   padding-bottom: 8px;
 }
 
-.pub-category {
+.pub-category, .people-category {
   display: none;
 }
 
-.pub-category.active {
+.pub-category.active, .people-category.active {
   display: block;
 }
 

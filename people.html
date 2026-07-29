@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>People | AIM Lab - NMSU</title>
-  <link rel="stylesheet" href="styles.css?v=1.1.7">
+  <link rel="stylesheet" href="styles.css?v=1.1.8">
 </head>
 <body>
 
@@ -46,40 +46,105 @@
   <!-- PEOPLE PAGE CONTENT -->
   <main class="main-content">
     <div class="section-container">
-      <h2 class="section-title">Principal Investigator</h2>
-      <div class="section-divider"></div>
-
-      <!-- PI Profile Card -->
-      <div class="pi-profile-card">
-        <div class="pi-photo-container">
-          <img src="Members/Sungmoon.jpg?v=1.0" alt="Prof. Sungmoon Choi" class="pi-photo">
+      
+      <!-- SUB-MENU / CATEGORIES BELOW PEOPLE HEADER -->
+      <div class="tree-container">
+        <div class="tree-header">People Categories</div>
+        <div class="tree-branches">
+          <button class="tree-btn active" data-target="pi">
+            <span class="tree-icon">├──</span> Principal Investigator
+          </button>
+          <button class="tree-btn" data-target="phd">
+            <span class="tree-icon">├──</span> Ph.D. Students
+          </button>
+          <button class="tree-btn" data-target="ms">
+            <span class="tree-icon">├──</span> M.S. Students
+          </button>
+          <button class="tree-btn" data-target="undergrad">
+            <span class="tree-icon">├──</span> Undergraduate Students
+          </button>
+          <button class="tree-btn" data-target="alumni">
+            <span class="tree-icon">└──</span> Alumni
+          </button>
         </div>
-        <div class="pi-details">
-          <h3 class="pi-name">Sungmoon Choi, Ph.D.</h3>
-          <p class="pi-title">Assistant Professor (Tenure-Track)</p>
-          <p class="pi-affiliation">Department of Mechanical and Aerospace Engineering<br>New Mexico State University</p>
-          
-          <div class="pi-contact-group">
-            <p><strong>Email:</strong> sungmoon.at.nmsu.edu</p>
-            <p><strong>Office:</strong> Department of Mechanical & Aerospace Engineering, NMSU</p>
-          </div>
+      </div>
 
-          <div class="pi-section">
-            <h4 class="pi-subtitle">Education</h4>
-            <ul class="pi-edu-list">
-              <li><strong>Ph.D., Aerospace Engineering (Minor: Computer Science)</strong> — Iowa State University, Ames, IA, 2026.05</li>
-              <li><strong>M.S., Aerospace Engineering</strong> — Iowa State University, Ames, IA, 2025.12</li>
-              <li><strong>M.S., Astronomy</strong> — Yonsei University, Seoul, Korea, 2020.02</li>
-              <li><strong>B.S., Mechanical Engineering</strong> — Pusan National University, Busan, Korea, 2016.08</li>
-            </ul>
-          </div>
+      <!-- 1. Principal Investigator Category (Active by Default) -->
+      <div class="people-category active" id="cat-pi">
+        <h2 class="section-title">Principal Investigator</h2>
+        <div class="section-divider"></div>
 
-          <div class="pi-section">
-            <h4 class="pi-subtitle">Biography & Research Overview</h4>
-            <p class="pi-bio">
-              Dr. Sungmoon Choi is an Assistant Professor in the Department of Mechanical and Aerospace Engineering at New Mexico State University (NMSU) and the director of the AeroAstro Intelligent Mechanics Lab (AIM Lab). His research lies at the intersection of astrodynamics, space mission trajectory optimization, optical navigation, and physics-informed machine learning. He is dedicated to advancing autonomous deep-space navigation and intelligent orbital mechanics.
-            </p>
+        <div class="pi-profile-card">
+          <div class="pi-photo-container">
+            <img src="Members/Sungmoon.jpg?v=1.0" alt="Prof. Sungmoon Choi" class="pi-photo">
           </div>
+          <div class="pi-details">
+            <h3 class="pi-name">Sungmoon Choi, Ph.D.</h3>
+            <p class="pi-title">Assistant Professor (Tenure-Track)</p>
+            <p class="pi-affiliation">Department of Mechanical and Aerospace Engineering<br>New Mexico State University</p>
+            
+            <div class="pi-contact-group">
+              <p><strong>Email:</strong> sungmoon.at.nmsu.edu</p>
+              <p><strong>Office:</strong> Department of Mechanical & Aerospace Engineering, NMSU</p>
+            </div>
+
+            <div class="pi-section">
+              <h4 class="pi-subtitle">Education</h4>
+              <ul class="pi-edu-list">
+                <li><strong>Ph.D., Aerospace Engineering (Minor: Computer Science)</strong> — Iowa State University, Ames, IA, 2026.05</li>
+                <li><strong>M.S., Aerospace Engineering</strong> — Iowa State University, Ames, IA, 2025.12</li>
+                <li><strong>M.S., Astronomy</strong> — Yonsei University, Seoul, Korea, 2020.02</li>
+                <li><strong>B.S., Mechanical Engineering</strong> — Pusan National University, Busan, Korea, 2016.08</li>
+              </ul>
+            </div>
+
+            <div class="pi-section">
+              <h4 class="pi-subtitle">Biography & Research Overview</h4>
+              <p class="pi-bio">
+                Dr. Sungmoon Choi is an Assistant Professor in the Department of Mechanical and Aerospace Engineering at New Mexico State University (NMSU) and the director of the AeroAstro Intelligent Mechanics Lab (AIM Lab). His research lies at the intersection of astrodynamics, space mission trajectory optimization, optical navigation, and physics-informed machine learning. He is dedicated to advancing autonomous deep-space navigation and intelligent orbital mechanics.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Ph.D. Students Category -->
+      <div class="people-category" id="cat-phd">
+        <h2 class="section-title">Ph.D. Students</h2>
+        <div class="section-divider"></div>
+        <div class="info-card">
+          <h3>Ph.D. Candidates & Researchers</h3>
+          <p class="section-desc">We are actively recruiting passionate Ph.D. students in astrodynamics, trajectory optimization, and AI/ML. Interested candidates are encouraged to contact Dr. Sungmoon Choi.</p>
+        </div>
+      </div>
+
+      <!-- 3. M.S. Students Category -->
+      <div class="people-category" id="cat-ms">
+        <h2 class="section-title">M.S. Students</h2>
+        <div class="section-divider"></div>
+        <div class="info-card">
+          <h3>M.S. Graduate Researchers</h3>
+          <p class="section-desc">Graduate research opportunities are available for M.S. students interested in space flight mechanics and autonomous navigation.</p>
+        </div>
+      </div>
+
+      <!-- 4. Undergraduate Students Category -->
+      <div class="people-category" id="cat-undergrad">
+        <h2 class="section-title">Undergraduate Students</h2>
+        <div class="section-divider"></div>
+        <div class="info-card">
+          <h3>Undergraduate Researchers</h3>
+          <p class="section-desc">AIM Lab supports undergraduate research projects in aerospace engineering and orbital dynamics.</p>
+        </div>
+      </div>
+
+      <!-- 5. Alumni Category -->
+      <div class="people-category" id="cat-alumni">
+        <h2 class="section-title">Alumni</h2>
+        <div class="section-divider"></div>
+        <div class="info-card">
+          <h3>AIM Lab Alumni</h3>
+          <p class="section-desc">Past researchers and student alumni of AIM Lab.</p>
         </div>
       </div>
 
