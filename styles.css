@@ -108,7 +108,7 @@ body {
   text-decoration: underline;
 }
 
-/* 2. AIM Lab Header & Sticky Navigation Tabs */
+/* 2. AIM Lab Header & Navigation Tabs */
 .main-header {
   position: sticky;
   top: 0;
@@ -188,14 +188,13 @@ body {
   box-shadow: 0 4px 14px rgba(136, 0, 41, 0.35);
 }
 
-/* 3. MAIN CONTENT SECTIONS (Offset for sticky header) */
+/* 3. MAIN CONTENT SECTIONS */
 .main-content {
   padding: 20px 0 80px;
 }
 
 .section {
   padding: 50px 0;
-  scroll-margin-top: 140px; /* Offset for sticky header when navigating */
 }
 
 .section-container {
@@ -209,6 +208,33 @@ body {
   font-size: 2.4rem;
   font-weight: 800;
   color: var(--space-dark);
+}
+
+.pub-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.scholar-btn {
+  background-color: var(--nmsu-crimson);
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-family: 'Outfit', 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 0.98rem;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(136, 0, 41, 0.2);
+}
+
+.scholar-btn:hover {
+  background-color: var(--nmsu-crimson-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(136, 0, 41, 0.35);
 }
 
 .section-desc {
@@ -304,7 +330,7 @@ body {
   margin-bottom: 10px;
 }
 
-/* 4. PUBLICATIONS TREE STRUCTURE BELOW PUBLICATIONS HEADER */
+/* 4. PUBLICATIONS CATEGORIES STRUCTURE BELOW PUBLICATIONS HEADER */
 .tree-container {
   background-color: #ffffff;
   border: 1.5px solid #e2e8f0;
