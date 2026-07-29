@@ -3,192 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AeroAstro Intelligent Mechanics Lab (AIM Lab) | NMSU</title>
-  <meta name="description" content="AeroAstro Intelligent Mechanics Lab (AIM Lab) at New Mexico State University. Led by Assistant Professor Sungmoon Choi. Researching Astrodynamics, Orbital Mechanics, Space Mission Design, and AI/ML.">
-  
-  <!-- CSS Stylesheets -->
+  <title>New Mexico State University | Department of Mechanical and Aerospace Engineering</title>
   <link rel="stylesheet" href="styles.css">
-  
-  <!-- Font Awesome Icons for visual excellence -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-  <!-- ==========================================================================
-       1. TOP INSTITUTION BAR (NMSU & Department Header)
-       ========================================================================== -->
+  <!-- TOP INSTITUTION BAR -->
   <div class="top-institution-bar">
-    <div class="top-institution-left">
-      <a href="https://nmsu.edu" target="_blank" rel="noopener noreferrer" title="New Mexico State University">
-        <img src="assets/nmsu_logo.svg" alt="NMSU Logo" class="nmsu-header-logo">
-      </a>
-      <div class="institution-divider"></div>
-      <div class="institution-text">
-        <a href="https://nmsu.edu" target="_blank" rel="noopener noreferrer" class="institution-name">New Mexico State University</a>
-        <a href="https://mae.nmsu.edu" target="_blank" rel="noopener noreferrer" class="department-name">Department of Mechanical and Aerospace Engineering</a>
-      </div>
-    </div>
-    <div class="top-institution-right">
-      <a href="https://nmsu.edu" target="_blank" class="top-link"><i class="fa-solid fa-building-columns"></i> NMSU Home</a>
-      <a href="https://mae.nmsu.edu" target="_blank" class="top-link"><i class="fa-solid fa-graduation-cap"></i> MAE Department</a>
+    <div class="institution-text">
+      <div class="institution-name">New Mexico State University</div>
+      <div class="department-name">Department of Mechanical and Aerospace Engineering</div>
     </div>
   </div>
 
-  <!-- ==========================================================================
-       2. MAIN NAVIGATION BAR (AIM Lab)
-       ========================================================================== -->
-  <header class="main-header">
-    <div class="nav-container">
-      <a href="index.html" class="brand-logo">
-        <div class="brand-badge">AIM</div>
-        <div class="brand-info">
-          <span class="brand-title">AIM Lab</span>
-          <span class="brand-subtitle">AeroAstro Intelligent Mechanics Lab</span>
-        </div>
-      </a>
-
-      <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle navigation">
-        <i class="fa-solid fa-bars"></i>
-      </button>
-
-      <nav>
-        <ul class="nav-menu" id="navMenu">
-          <li><a href="#home" class="nav-link active">Home</a></li>
-          <li><a href="#research" class="nav-link">Research</a></li>
-          <li><a href="#publications" class="nav-link">Publications</a></li>
-          <li><a href="#people" class="nav-link">People</a></li>
-          <li><a href="#teaching" class="nav-link">Teaching</a></li>
-          <li><a href="#contact" class="nav-link btn-contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <!-- ==========================================================================
-       3. HERO SECTION
-       ========================================================================== -->
-  <section id="home" class="hero-section">
-    <div class="hero-container">
-      <div class="hero-content">
-        <div class="hero-tag">
-          <i class="fa-solid fa-rocket"></i> Aerospace & Artificial Intelligence
-        </div>
-        <h1 class="hero-title">
-          Advancing Space Exploration via <span>Intelligent Mechanics</span>
-        </h1>
-        <p class="hero-subtitle">
-          At <strong>AeroAstro Intelligent Mechanics Lab (AIM Lab)</strong>, we bridge astrodynamics, space mission navigation, dynamic systems, and artificial intelligence to design optimal trajectories and autonomous space systems for complex space missions.
-        </p>
-        <div class="hero-cta">
-          <a href="#research" class="btn-primary"><i class="fa-solid fa-compass"></i> Explore Our Research</a>
-          <a href="#contact" class="btn-secondary"><i class="fa-solid fa-paper-plane"></i> Join Our Lab</a>
-        </div>
-      </div>
-
-      <!-- PI Profile Card -->
-      <div class="pi-card">
-        <div class="pi-header">
-          <div class="pi-avatar">SC</div>
-          <div>
-            <h2 class="pi-name">Prof. Sungmoon Choi</h2>
-            <p class="pi-role">Assistant Professor (Tenure-Track)</p>
-            <p class="pi-affiliation">New Mexico State University</p>
-          </div>
-        </div>
-        <div class="pi-details">
-          <div class="pi-item">
-            <span class="pi-label"><i class="fa-solid fa-building"></i> Dept:</span>
-            <span>Mechanical & Aerospace Engineering</span>
-          </div>
-          <div class="pi-item">
-            <span class="pi-label"><i class="fa-solid fa-envelope"></i> Email:</span>
-            <span>sungmoon@nmsu.edu</span>
-          </div>
-          <div class="pi-item">
-            <span class="pi-label"><i class="fa-solid fa-location-dot"></i> Location:</span>
-            <span>Las Cruces, NM</span>
-          </div>
-          <div class="pi-item">
-            <span class="pi-label"><i class="fa-solid fa-user-astronaut"></i> Background:</span>
-            <span>NASA JPL Intern | Ph.D. Iowa State</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       4. RESEARCH FOCUS AREAS (Overview)
-       ========================================================================== -->
-  <section id="research" class="section">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Core Research Thrusts</span>
-        <h2 class="section-title">Pioneering Frontiers in Aerospace Mechanics</h2>
-      </div>
-
-      <div class="grid-3">
-        <!-- Thrust 1 -->
-        <div class="focus-card">
-          <div class="focus-icon">
-            <i class="fa-solid fa-satellite"></i>
-          </div>
-          <h3 class="focus-title">Astrodynamics & Mission Design</h3>
-          <p class="focus-desc">
-            Trajectory optimization, multiple gravity-assist tour design, Mars aerobraking, and low-thrust trajectory formulation using dynamic-size genetic algorithms and shape-based approaches.
-          </p>
-        </div>
-
-        <!-- Thrust 2 -->
-        <div class="focus-card">
-          <div class="focus-icon">
-            <i class="fa-solid fa-brain"></i>
-          </div>
-          <h3 class="focus-title">AI & Machine Learning for Space</h3>
-          <p class="focus-desc">
-            Physics-informed neural networks (PINNs), reinforcement learning for mission tour design, and deep learning acceleration for Lambert’s problem and deep-space maneuvers.
-          </p>
-        </div>
-
-        <!-- Thrust 3 -->
-        <div class="focus-card">
-          <div class="focus-icon">
-            <i class="fa-solid fa-route"></i>
-          </div>
-          <h3 class="focus-title">Optical Navigation & Dynamic Systems</h3>
-          <p class="focus-desc">
-            Angles-only deep-space initial orbit determination, multi-body orbital dynamics (CRTBP), and autonomous state estimation for next-generation planetary and deep-space missions.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       5. FOOTER
-       ========================================================================== -->
-  <footer id="contact">
-    <div class="footer-container">
-      <div>
-        <h3 style="font-family: var(--font-heading); font-size: 1.3rem; margin-bottom: 8px; color: white;">
-          AeroAstro Intelligent Mechanics Lab (AIM Lab)
-        </h3>
-        <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">
-          Department of Mechanical and Aerospace Engineering | New Mexico State University
-        </p>
-      </div>
-      <div>
-        <p style="color: rgba(255,255,255,0.9); font-size: 0.95rem;">
-          <i class="fa-solid fa-envelope" style="color: var(--nmsu-crimson-light); margin-right: 6px;"></i> <strong>Email:</strong> <a href="mailto:sungmoon@nmsu.edu" style="color: white; text-decoration: underline;">sungmoon@nmsu.edu</a>
-        </p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      &copy; 2026 AeroAstro Intelligent Mechanics Lab (AIM Lab). All rights reserved. | New Mexico State University
-    </div>
-  </footer>
-
-  <!-- Javascript -->
-  <script src="main.js"></script>
 </body>
 </html>
+
