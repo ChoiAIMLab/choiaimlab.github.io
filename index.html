@@ -41,16 +41,7 @@
         <a href="#research" class="nav-tab">Research</a>
         <a href="#courses" class="nav-tab">Courses</a>
         <a href="#people" class="nav-tab">People</a>
-
-        <!-- Publications Dropdown Tree Menu -->
-        <div class="dropdown">
-          <a href="#publications" class="nav-tab dropdown-toggle">Publications <span class="arrow">▾</span></a>
-          <div class="dropdown-menu">
-            <a href="#publications-journals" class="dropdown-item" data-filter="journal">Journal Papers</a>
-            <a href="#publications-conferences" class="dropdown-item" data-filter="conference">Conference Proceedings</a>
-            <a href="#publications-posters" class="dropdown-item" data-filter="poster">Poster Presentations</a>
-          </div>
-        </div>
+        <a href="#publications" class="nav-tab">Publications</a>
       </nav>
     </div>
   </header>
@@ -59,21 +50,19 @@
   <section id="publications" class="section">
     <div class="section-container">
       <div class="section-header">
-        <span class="section-tag">Research Output</span>
         <h2 class="section-title">Publications</h2>
+        <div class="section-divider"></div>
       </div>
 
-      <!-- Sub-Tabs for Publications Tree -->
-      <div class="pub-subtabs">
-        <button class="pub-tab-btn active" data-target="all">All</button>
-        <button class="pub-tab-btn" data-target="journal">Journal Papers</button>
-        <button class="pub-tab-btn" data-target="conference">Conference Proceedings</button>
-        <button class="pub-tab-btn" data-target="poster">Poster Presentations</button>
+      <!-- Tree Tabs under Publications -->
+      <div class="pub-tree-tabs">
+        <button class="pub-tree-btn active" data-target="journal">Journal Papers</button>
+        <button class="pub-tree-btn" data-target="conference">Conference Proceedings</button>
+        <button class="pub-tree-btn" data-target="poster">Poster Presentations</button>
       </div>
 
       <!-- Journal Papers Category -->
-      <div class="pub-category" id="cat-journal">
-        <h3 class="pub-category-title"><span class="badge">J</span> Journal Papers</h3>
+      <div class="pub-category active" id="cat-journal">
         <ol class="pub-list">
           <li class="pub-item">
             <span class="pub-tag">[J3]</span>
@@ -107,7 +96,6 @@
 
       <!-- Conference Proceedings Category -->
       <div class="pub-category" id="cat-conference">
-        <h3 class="pub-category-title"><span class="badge">C</span> Conference Proceedings</h3>
         <ol class="pub-list">
           <li class="pub-item">
             <span class="pub-tag">[C12]</span>
@@ -170,7 +158,6 @@
 
       <!-- Poster Presentations Category -->
       <div class="pub-category" id="cat-poster">
-        <h3 class="pub-category-title"><span class="badge">P</span> Poster Presentations</h3>
         <ol class="pub-list">
           <li class="pub-item">
             <span class="pub-tag">[P4]</span>
@@ -208,6 +195,7 @@
       </div>
     </div>
   </section>
+
 
   <!-- JavaScript Interaction -->
   <script src="main.js"></script>
