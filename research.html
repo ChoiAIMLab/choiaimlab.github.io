@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Research | AIM Lab - NMSU</title>
-  <link rel="stylesheet" href="styles.css?v=1.3.8">
+  <link rel="stylesheet" href="styles.css?v=1.3.9">
 </head>
 <body>
 
@@ -180,32 +180,81 @@
         </div>
       </div>
 
-      <!-- 2. PAST PROJECTS CATEGORY (REMOVED DATES & CRATER CHALLENGE) -->
+      <!-- 2. PAST PROJECTS CATEGORY (EXPANDABLE FIGURES ACCORDION) -->
       <div class="research-category" id="cat-past">
         <h3 class="category-subtitle" style="margin-bottom: 24px;">Past Projects</h3>
 
         <div style="display: flex; flex-direction: column; gap: 24px;">
-          <!-- Past Project 1 -->
-          <div class="info-card" style="border-left: 4px solid #64748b;">
-            <h4 style="font-family: 'Outfit', sans-serif; font-size: 1.35rem; color: var(--space-dark); margin-bottom: 8px;">Multidisciplinary Optimization for Mars Aerobraking Trajectories</h4>
-            <ul style="margin-left: 20px; color: var(--text-main); font-size: 1.05rem; line-height: 1.6;">
+          <!-- Past Project 1: Aerobraking -->
+          <div class="info-card expandable-card" style="border-left: 4px solid #64748b;">
+            <div style="display: flex; justify-content: space-between; align-items: center; gap: 14px; flex-wrap: wrap; cursor: pointer;" class="project-header-toggle" data-toggle="aerobraking-gallery">
+              <h4 style="font-family: 'Outfit', sans-serif; font-size: 1.35rem; color: var(--space-dark); margin-bottom: 0;">Multidisciplinary Optimization for Mars Aerobraking Trajectories</h4>
+              <button class="expand-btn">
+                🖼️ View Project Figures (3) <span class="expand-arrow">▼</span>
+              </button>
+            </div>
+            
+            <ul style="margin-left: 20px; color: var(--text-main); font-size: 1.05rem; line-height: 1.6; margin-top: 14px;">
               <li>Formulated a multidisciplinary optimization problem coupling Mars aerobraking trajectory and spacecraft design to demonstrate performance improvements</li>
             </ul>
+
+            <!-- Expandable Gallery Container -->
+            <div class="expandable-gallery" id="aerobraking-gallery">
+              <div class="gallery-grid">
+                <div class="gallery-item">
+                  <img src="Past%20Projects/Aerobraking1.png" alt="Mars Aerobraking Figure 1" class="gallery-img">
+                  <div class="img-caption">Figure 1: Aerobraking Trajectory Optimization</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="Past%20Projects/Aerobraking2.png" alt="Mars Aerobraking Figure 2" class="gallery-img">
+                  <div class="img-caption">Figure 2: Multidisciplinary Spacecraft Design Integration</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="Past%20Projects/Aerobraking3.png" alt="Mars Aerobraking Figure 3" class="gallery-img">
+                  <div class="img-caption">Figure 3: Aerodynamic Heat Flux & Entry Bounds</div>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <!-- Past Project 2 -->
-          <div class="info-card" style="border-left: 4px solid #64748b;">
-            <h4 style="font-family: 'Outfit', sans-serif; font-size: 1.35rem; color: var(--space-dark); margin-bottom: 8px;">Vectorized Dynamic-Size Genetic Algorithm Development</h4>
-            <ul style="margin-left: 20px; color: var(--text-main); font-size: 1.05rem; line-height: 1.6;">
+          <!-- Past Project 2: VSDGA -->
+          <div class="info-card expandable-card" style="border-left: 4px solid #64748b;">
+            <div style="display: flex; justify-content: space-between; align-items: center; gap: 14px; flex-wrap: wrap; cursor: pointer;" class="project-header-toggle" data-toggle="vsdga-gallery">
+              <h4 style="font-family: 'Outfit', sans-serif; font-size: 1.35rem; color: var(--space-dark); margin-bottom: 0;">Vectorized Dynamic-Size Genetic Algorithm Development</h4>
+              <button class="expand-btn">
+                🖼️ View Project Figures (3) <span class="expand-arrow">▼</span>
+              </button>
+            </div>
+
+            <ul style="margin-left: 20px; color: var(--text-main); font-size: 1.05rem; line-height: 1.6; margin-top: 14px;">
               <li>Developed a vectorized dynamic-size genetic algorithm integrating a GPU-accelerated neural network–based Lambert’s approximator to rapidly generate optimal and suboptimal flyby sequences</li>
             </ul>
+
+            <!-- Expandable Gallery Container -->
+            <div class="expandable-gallery" id="vsdga-gallery">
+              <div class="gallery-grid">
+                <div class="gallery-item">
+                  <img src="Past%20Projects/VSDGA0.png" alt="VSDGA Figure 1" class="gallery-img">
+                  <div class="img-caption">Figure 1: Vectorized Dynamic-Size Genetic Algorithm Architecture</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="Past%20Projects/VSDGA1.png" alt="VSDGA Figure 2" class="gallery-img">
+                  <div class="img-caption">Figure 2: Flyby Sequence Search & Trajectory Solutions</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="Past%20Projects/VSDGA2.png" alt="VSDGA Figure 3" class="gallery-img">
+                  <div class="img-caption">Figure 3: GPU Neural Network Lambert Speedup Comparison</div>
+                </div>
+              </div>
+            </div>
           </div>
+
         </div>
       </div>
 
     </div>
   </main>
 
-  <script src="main.js?v=1.0.1"></script>
+  <script src="main.js?v=1.0.2"></script>
 </body>
 </html>

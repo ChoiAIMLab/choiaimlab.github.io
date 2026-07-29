@@ -416,6 +416,90 @@ body {
   display: block;
 }
 
+/* 5. EXPANDABLE PROJECT FIGURES GALLERY */
+.expand-btn {
+  background-color: var(--nmsu-crimson-light);
+  color: var(--nmsu-crimson);
+  border: 1px solid rgba(136, 0, 41, 0.25);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 0.92rem;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.expand-btn:hover {
+  background-color: var(--nmsu-crimson);
+  color: #ffffff;
+}
+
+.expand-arrow {
+  transition: transform 0.3s ease;
+}
+
+.expandable-card.active .expand-arrow {
+  transform: rotate(180deg);
+}
+
+.expandable-gallery {
+  display: none;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px dashed #cbd5e1;
+  animation: fadeIn 0.35s ease-in-out;
+}
+
+.expandable-gallery.active {
+  display: block;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.gallery-item {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 12px;
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.gallery-img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 6px;
+  background-color: #ffffff;
+  padding: 6px;
+  cursor: zoom-in;
+}
+
+.img-caption {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 /* People Section Long Scrolling Offset */
 .people-section {
   scroll-margin-top: 150px;
@@ -484,7 +568,7 @@ body {
   text-decoration: underline;
 }
 
-/* 5. PRINCIPAL INVESTIGATOR PROFILE STYLING */
+/* 6. PRINCIPAL INVESTIGATOR PROFILE STYLING */
 .pi-profile-card {
   background-color: #ffffff;
   border: 1px solid #e2e8f0;
