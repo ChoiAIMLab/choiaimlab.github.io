@@ -4,9 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Publications | AIM Lab - NMSU</title>
-  <link rel="stylesheet" href="styles.css?v=1.1.4">
+  <link rel="stylesheet" href="styles.css?v=1.2.2">
 </head>
-
 <body>
 
   <!-- TOP INSTITUTION BAR -->
@@ -67,14 +66,16 @@
           <button class="tree-btn pub-category-btn" data-target="conference">
             <span class="tree-icon">├──</span> Conference Proceedings
           </button>
+          <button class="tree-btn pub-category-btn" data-target="student-conference">
+            <span class="tree-icon">├──</span> Student Conference Proceedings
+          </button>
           <button class="tree-btn pub-category-btn" data-target="poster">
             <span class="tree-icon">└──</span> Poster Presentations
           </button>
         </div>
-
       </div>
 
-      <!-- Journal Papers Category -->
+      <!-- 1. Journal Papers Category -->
       <div class="pub-category active" id="cat-journal">
         <h3 class="category-subtitle">Journal Papers</h3>
         <ol class="pub-list">
@@ -108,7 +109,7 @@
         </ol>
       </div>
 
-      <!-- Conference Proceedings Category -->
+      <!-- 2. Conference Proceedings Category -->
       <div class="pub-category" id="cat-conference">
         <h3 class="category-subtitle">Conference Proceedings</h3>
         <ol class="pub-list">
@@ -211,7 +212,38 @@
         </ol>
       </div>
 
-      <!-- Poster Presentations Category -->
+      <!-- 3. Student Conference Proceedings Category (New Category) -->
+      <div class="pub-category" id="cat-student-conference">
+        <h3 class="category-subtitle">Student Conference Proceedings</h3>
+        <ol class="pub-list">
+          <li class="pub-item">
+            <span class="pub-tag">[S3]</span>
+            <div class="pub-content">
+              <span class="pub-authors">Larsen, K. (2026, March).</span>
+              <span class="pub-paper-title">A Contour-Integral Approach to Collinear Lagrange Points and Zero-Velocity Region Openings in the Circular Restricted Three-Body Problem.</span>
+              <span class="pub-venue">In <em>2026 Regional Student Conferences</em> (p. 114205).</span>
+            </div>
+          </li>
+          <li class="pub-item">
+            <span class="pub-tag">[S2]</span>
+            <div class="pub-content">
+              <span class="pub-authors">Roy, T. (2026, March).</span>
+              <span class="pub-paper-title">Low-Thrust Trajectory Optimization via Direct Transcription Using Extreme Theory of Functional Connections.</span>
+              <span class="pub-venue">In <em>2026 Regional Student Conferences</em> (p. 114788).</span>
+            </div>
+          </li>
+          <li class="pub-item">
+            <span class="pub-tag">[S1]</span>
+            <div class="pub-content">
+              <span class="pub-authors">Park, M. (2026, March).</span>
+              <span class="pub-paper-title">A Comparative Study of Physics-Informed Neural Networks and Extreme Theory of Functional Connections for Two-Point Orbital Transfers.</span>
+              <span class="pub-venue">In <em>2026 Regional Student Conferences</em> (p. 115555).</span>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <!-- 4. Poster Presentations Category -->
       <div class="pub-category" id="cat-poster">
         <h3 class="category-subtitle">Poster Presentations</h3>
         <ol class="pub-list">
@@ -233,10 +265,6 @@
               <a href="posters/Ambiguity-Free%20Angle%20Only%20Nav%20Poster.pdf?v=1.0" target="_blank" rel="noopener noreferrer" class="pub-link">[Poster]</a>
             </div>
           </li>
-
-
-
-
           <li class="pub-item">
             <span class="pub-tag">[P2]</span>
             <div class="pub-content">
@@ -255,7 +283,6 @@
           </li>
         </ol>
       </div>
-
 
     </div>
   </main>
