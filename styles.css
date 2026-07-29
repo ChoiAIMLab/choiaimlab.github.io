@@ -477,6 +477,100 @@ body {
   text-decoration: underline;
 }
 
+/* 5. PRINCIPAL INVESTIGATOR PROFILE STYLING */
+.pi-profile-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 40px;
+  display: flex;
+  gap: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  align-items: flex-start;
+}
+
+.pi-photo-container {
+  flex-shrink: 0;
+}
+
+.pi-photo {
+  width: 240px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  border: 3px solid #ffffff;
+  outline: 1px solid #e2e8f0;
+}
+
+.pi-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pi-name {
+  font-family: 'Outfit', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--space-dark);
+  line-height: 1.2;
+}
+
+.pi-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--nmsu-crimson);
+}
+
+.pi-affiliation {
+  font-size: 1rem;
+  color: var(--text-main);
+  line-height: 1.5;
+}
+
+.pi-contact-group {
+  background-color: var(--nmsu-crimson-light);
+  border-left: 4px solid var(--nmsu-crimson);
+  padding: 14px 18px;
+  border-radius: 6px;
+  margin: 8px 0;
+}
+
+.pi-contact-group a {
+  color: var(--nmsu-crimson);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.pi-contact-group a:hover {
+  text-decoration: underline;
+}
+
+.pi-subtitle {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--space-dark);
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+
+.pi-edu-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.pi-bio {
+  font-size: 1.02rem;
+  color: var(--text-main);
+  line-height: 1.7;
+}
+
 /* Responsive tweaking */
 @media (max-width: 960px) {
   .lab-container {
@@ -490,5 +584,16 @@ body {
     justify-content: flex-start;
     gap: 14px;
     flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .pi-profile-card {
+    flex-direction: column;
+    align-items: center;
+  }
+  .pi-photo {
+    width: 200px;
+    height: 250px;
   }
 }
