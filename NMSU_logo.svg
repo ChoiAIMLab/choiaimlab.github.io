@@ -1,6 +1,7 @@
 ﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 260" width="240" height="260">
-  <path d="M 0 0 L 240 0 L 240 228 L 106 228 L 106 260 L 40 260 L 40 228 L 0 228 Z" fill="#ffffff"/>
-  <text x="12" y="92" font-family="Georgia, 'Times New Roman', serif" font-weight="900" font-size="96" fill="#880029" letter-spacing="-3">NM</text>
-  <text x="12" y="162" font-family="Georgia, 'Times New Roman', serif" font-weight="bold" font-size="58" fill="#880029" letter-spacing="1">STATE</text>
-  <text x="12" y="212" font-family="Georgia, 'Times New Roman', serif" font-weight="bold" font-size="32" fill="#880029" letter-spacing="1.5">UNIVERSITY</text>
+  <!-- Solid Crimson Box with NM State silhouette cutoff at bottom left -->
+  <path d="M 0 0 L 240 0 L 240 228 L 106 228 L 106 260 L 40 260 L 40 228 L 0 228 Z" fill="#880029"/>
+  <text x="14" y="92" font-family="Georgia, 'Times New Roman', serif" font-weight="900" font-size="95" fill="#ffffff" letter-spacing="-2">NM</text>
+  <text x="14" y="162" font-family="Georgia, 'Times New Roman', serif" font-weight="bold" font-size="58" fill="#ffffff" letter-spacing="1">STATE</text>
+  <text x="14" y="212" font-family="Georgia, 'Times New Roman', serif" font-weight="bold" font-size="32" fill="#ffffff" letter-spacing="1.5">UNIVERSITY</text>
 </svg>

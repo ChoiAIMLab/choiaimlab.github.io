@@ -44,12 +44,24 @@ body {
   gap: 18px;
 }
 
+.logo-link {
+  display: inline-block;
+  text-decoration: none;
+}
+
 .nmsu-logo {
   height: 52px;
   width: auto;
   object-fit: contain;
   display: block;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.nmsu-logo:hover {
+  transform: scale(1.03);
 }
 
 .institution-text {
@@ -65,7 +77,14 @@ body {
   letter-spacing: 0.5px;
   text-transform: uppercase;
   color: #ffffff;
+  text-decoration: none;
   line-height: 1.2;
+  transition: opacity 0.2s ease;
+}
+
+.institution-name:hover {
+  opacity: 0.85;
+  text-decoration: underline;
 }
 
 .department-name {
@@ -73,11 +92,18 @@ body {
   font-weight: 400;
   font-size: 0.88rem;
   color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
   line-height: 1.3;
   margin-top: 3px;
+  transition: opacity 0.2s ease;
 }
 
-/* 2. AIM Lab Branding Section (Aligned Container) */
+.department-name:hover {
+  opacity: 0.85;
+  text-decoration: underline;
+}
+
+/* 2. AIM Lab Branding Section */
 .lab-branding-section {
   padding: 50px 0;
   width: 100%;
@@ -91,19 +117,6 @@ body {
   padding: 0 40px;
   display: flex;
   align-items: center;
-  gap: 28px;
-}
-
-.aim-lab-logo {
-  width: 90px;
-  height: 90px;
-  object-fit: contain;
-  filter: drop-shadow(0 4px 12px rgba(136, 0, 41, 0.2));
-  transition: transform 0.3s ease;
-}
-
-.aim-lab-logo:hover {
-  transform: scale(1.05) rotate(3deg);
 }
 
 .lab-title-group {
@@ -142,13 +155,6 @@ body {
   }
   .department-name {
     font-size: 0.78rem;
-  }
-  .lab-container {
-    gap: 18px;
-  }
-  .aim-lab-logo {
-    width: 68px;
-    height: 68px;
   }
   .lab-title {
     font-size: 2.2rem;
