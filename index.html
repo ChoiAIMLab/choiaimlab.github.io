@@ -4,10 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AeroAstro Intelligent Mechanics Lab (AIM Lab) | NMSU</title>
-  <link rel="stylesheet" href="styles.css?v=1.0.3">
+  <link rel="stylesheet" href="styles.css?v=1.0.4">
 </head>
-
-
 <body>
 
   <!-- 1. TOP INSTITUTION BAR -->
@@ -33,24 +31,24 @@
         <p class="lab-subtitle">AeroAstro Intelligent Mechanics Lab</p>
       </div>
 
-      <!-- Navigation Tabs (Right Side) -->
+      <!-- Navigation Tabs (Anchor Links for Smooth Navigation) -->
       <nav class="nav-tabs">
-        <button class="nav-tab active" data-section="home">Home</button>
-        <button class="nav-tab" data-section="news">News</button>
-        <button class="nav-tab" data-section="about">About</button>
-        <button class="nav-tab" data-section="research">Research</button>
-        <button class="nav-tab" data-section="courses">Courses</button>
-        <button class="nav-tab" data-section="people">People</button>
-        <button class="nav-tab" data-section="publications">Publications</button>
+        <a href="#home" class="nav-tab active">Home</a>
+        <a href="#news" class="nav-tab">News</a>
+        <a href="#about" class="nav-tab">About</a>
+        <a href="#research" class="nav-tab">Research</a>
+        <a href="#courses" class="nav-tab">Courses</a>
+        <a href="#people" class="nav-tab">People</a>
+        <a href="#publications" class="nav-tab">Publications</a>
       </nav>
     </div>
   </header>
 
-  <!-- 3. PAGE SECTIONS (Only the active section is visible) -->
+  <!-- 3. MAIN CONTENT SECTIONS -->
   <main class="main-content">
     
     <!-- HOME SECTION -->
-    <section id="sec-home" class="page-section active">
+    <section id="home" class="section">
       <div class="section-container">
         <div class="hero-box">
           <h2 class="hero-heading">Welcome to AIM Lab</h2>
@@ -67,11 +65,11 @@
     </section>
 
     <!-- NEWS SECTION -->
-    <section id="sec-news" class="page-section">
+    <section id="news" class="section">
       <div class="section-container">
         <h2 class="section-title">News & Announcements</h2>
         <div class="section-divider"></div>
-        <ul class="news-list">
+        <ul class="info-list">
           <li><strong>[2026.08]</strong> Prof. Sungmoon Choi joins NMSU MAE Department as Assistant Professor!</li>
           <li><strong>[2026.05]</strong> New paper on Vectorized Dynamic-Size Genetic Algorithm published in <em>Astrodynamics</em>.</li>
         </ul>
@@ -79,29 +77,31 @@
     </section>
 
     <!-- ABOUT SECTION -->
-    <section id="sec-about" class="page-section">
+    <section id="about" class="section">
       <div class="section-container">
         <h2 class="section-title">About AIM Lab</h2>
         <div class="section-divider"></div>
-        <p>AIM Lab investigates fundamental and applied problems in orbital mechanics, space mission trajectory optimization, and autonomous deep-space navigation.</p>
+        <p class="section-desc">
+          AIM Lab investigates fundamental and applied problems in orbital mechanics, space mission trajectory optimization, and autonomous deep-space navigation.
+        </p>
       </div>
     </section>
 
     <!-- RESEARCH SECTION -->
-    <section id="sec-research" class="page-section">
+    <section id="research" class="section">
       <div class="section-container">
         <h2 class="section-title">Research Thrusts</h2>
         <div class="section-divider"></div>
-        <div class="research-grid">
-          <div class="research-card">
+        <div class="card-grid">
+          <div class="info-card">
             <h3>Astrodynamics & Mission Design</h3>
             <p>Multi-gravity assist tour design, trajectory optimization, low-thrust shape-based formulations.</p>
           </div>
-          <div class="research-card">
+          <div class="info-card">
             <h3>AI & Physics-Informed ML</h3>
             <p>PINNs for CRTBP, neural network-based Lambert's problem solvers, reinforcement learning.</p>
           </div>
-          <div class="research-card">
+          <div class="info-card">
             <h3>Optical Navigation</h3>
             <p>Angles-only deep-space initial orbit determination and geometric state estimation.</p>
           </div>
@@ -110,11 +110,11 @@
     </section>
 
     <!-- COURSES SECTION -->
-    <section id="sec-courses" class="page-section">
+    <section id="courses" class="section">
       <div class="section-container">
         <h2 class="section-title">Courses & Teaching</h2>
         <div class="section-divider"></div>
-        <ul class="course-list">
+        <ul class="info-list">
           <li><strong>Orbital Mechanics</strong> — Department of Mechanical & Aerospace Engineering</li>
           <li><strong>System Engineering</strong> — Department of Mechanical & Aerospace Engineering</li>
         </ul>
@@ -122,11 +122,11 @@
     </section>
 
     <!-- PEOPLE SECTION -->
-    <section id="sec-people" class="page-section">
+    <section id="people" class="section">
       <div class="section-container">
         <h2 class="section-title">Lab Members</h2>
         <div class="section-divider"></div>
-        <div class="people-card">
+        <div class="info-card">
           <h3>Sungmoon Choi, Ph.D.</h3>
           <p>Assistant Professor & Lab Director</p>
           <p>Department of Mechanical & Aerospace Engineering, NMSU</p>
@@ -134,31 +134,21 @@
       </div>
     </section>
 
-    <!-- PUBLICATIONS SECTION (TREE STRUCTURE) -->
-    <section id="sec-publications" class="page-section">
+    <!-- PUBLICATIONS SECTION -->
+    <section id="publications" class="section">
       <div class="section-container">
         <h2 class="section-title">Publications</h2>
         <div class="section-divider"></div>
 
-        <!-- TREE STRUCTURE BELOW PUBLICATIONS -->
-        <div class="tree-navigation">
-          <div class="tree-root">Publications Tree</div>
-          <div class="tree-branches">
-            <button class="tree-btn active" data-target="journal">
-              <span class="branch-symbol">├──</span> Journal Papers
-            </button>
-            <button class="tree-btn" data-target="conference">
-              <span class="branch-symbol">├──</span> Conference Proceedings
-            </button>
-            <button class="tree-btn" data-target="poster">
-              <span class="branch-symbol">└──</span> Poster Presentations
-            </button>
-          </div>
+        <!-- Sub-Tabs under Publications -->
+        <div class="pub-tree-tabs">
+          <button class="pub-tree-btn active" data-target="journal">Journal Papers</button>
+          <button class="pub-tree-btn" data-target="conference">Conference Proceedings</button>
+          <button class="pub-tree-btn" data-target="poster">Poster Presentations</button>
         </div>
 
         <!-- Journal Papers Category -->
         <div class="pub-category active" id="cat-journal">
-          <h3 class="cat-heading">Journal Papers</h3>
           <ol class="pub-list">
             <li class="pub-item">
               <span class="pub-tag">[J3]</span>
@@ -192,7 +182,6 @@
 
         <!-- Conference Proceedings Category -->
         <div class="pub-category" id="cat-conference">
-          <h3 class="cat-heading">Conference Proceedings</h3>
           <ol class="pub-list">
             <li class="pub-item">
               <span class="pub-tag">[C12]</span>
@@ -255,7 +244,6 @@
 
         <!-- Poster Presentations Category -->
         <div class="pub-category" id="cat-poster">
-          <h3 class="cat-heading">Poster Presentations</h3>
           <ol class="pub-list">
             <li class="pub-item">
               <span class="pub-tag">[P4]</span>
@@ -297,14 +285,6 @@
 
   </main>
 
-  <!-- JavaScript Interaction -->
   <script src="main.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-

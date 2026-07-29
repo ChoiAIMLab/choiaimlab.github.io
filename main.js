@@ -1,44 +1,37 @@
-// Single Page Tab Navigation & Publications Tree Switching
+// Smooth Scrolling & Publications Sub-Tab Switching
 document.addEventListener('DOMContentLoaded', () => {
-  const navTabs = document.querySelectorAll('.nav-tab');
-  const pageSections = document.querySelectorAll('.page-section');
-  const treeBtns = document.querySelectorAll('.tree-btn');
+  const treeBtns = document.querySelectorAll('.pub-tree-btn');
   const pubCategories = document.querySelectorAll('.pub-category');
+  const navLinks = document.querySelectorAll('.nav-tab');
 
-  // 1. Main Navigation Tab Switch (Exclusively show clicked section)
-  navTabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      const targetSection = tab.getAttribute('data-section');
+  // 1. Smooth Scrolling for Navigation Tabs
+  navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetId = link.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetId);
 
-      // Update active nav tab
-      navTabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
+      if (targetElement) {
+        // Highlight active tab
+        navLinks.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
 
-      // Show targeted section only
-      pageSections.forEach(sec => {
-        const secId = sec.getAttribute('id');
-        if (secId === `sec-${targetSection}`) {
-          sec.classList.add('active');
-        } else {
-          sec.classList.remove('active');
-        }
-      });
-
-      // Scroll smoothly to top of main content
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+        // Smooth scroll to section
+        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     });
   });
 
-  // 2. Publications Tree Sub-Tab Switch
+  // 2. Publications Sub-Tab Category Switching
   treeBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       const targetCat = btn.getAttribute('data-target');
 
-      // Highlight active tree node
+      // Update button active state
       treeBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
 
-      // Show selected category
+      // Toggle category visibility
       pubCategories.forEach(cat => {
         const catId = cat.getAttribute('id');
         if (catId === `cat-${targetCat}`) {
