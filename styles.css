@@ -1,10 +1,12 @@
-/* Top Institution Bar */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Outfit:wght@600;700&display=swap');
+/* Modern Styling for NMSU & AIM Lab Header */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap');
 
 :root {
   --nmsu-crimson: #880029;
-  --text-main: #1f2937;
-  --bg-light: #f8fafc;
+  --space-dark: #0f172a;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --bg-light: #ffffff;
 }
 
 * {
@@ -17,28 +19,41 @@ body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   background-color: var(--bg-light);
   color: var(--text-main);
+  line-height: 1.5;
 }
 
+/* Top Institution Bar with NMSU Crimson Background */
 .top-institution-bar {
   background-color: var(--nmsu-crimson);
   color: #ffffff;
-  padding: 12px 24px;
+  padding: 12px 5%;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+}
+
+.institution-brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nmsu-logo {
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+  display: block;
 }
 
 .institution-text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  text-align: left;
 }
 
 .institution-name {
   font-family: 'Outfit', sans-serif;
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   color: #ffffff;
@@ -48,8 +63,55 @@ body {
 .department-name {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   color: rgba(255, 255, 255, 0.9);
   line-height: 1.3;
   margin-top: 2px;
+}
+
+/* AIM Lab Branding Section */
+.lab-branding-section {
+  padding: 40px 5% 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.lab-title {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 3rem;
+  color: var(--space-dark);
+  letter-spacing: -0.5px;
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+.lab-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+  color: var(--nmsu-crimson);
+  letter-spacing: -0.2px;
+}
+
+/* Responsive tweak */
+@media (max-width: 640px) {
+  .institution-brand {
+    gap: 12px;
+  }
+  .nmsu-logo {
+    height: 36px;
+  }
+  .institution-name {
+    font-size: 0.92rem;
+  }
+  .department-name {
+    font-size: 0.78rem;
+  }
+  .lab-title {
+    font-size: 2.2rem;
+  }
+  .lab-subtitle {
+    font-size: 1.05rem;
+  }
 }
