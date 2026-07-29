@@ -1,7 +1,23 @@
 ﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 260" width="240" height="260">
-  <!-- Solid Crimson Box with NM State silhouette cutoff at bottom left -->
+  <!-- Crimson Base with State Silhouette Cutout -->
   <path d="M 0 0 L 240 0 L 240 228 L 106 228 L 106 260 L 40 260 L 40 228 L 0 228 Z" fill="#880029"/>
-  <text x="14" y="92" font-family="Georgia, 'Times New Roman', serif" font-weight="900" font-size="95" fill="#ffffff" letter-spacing="-2">NM</text>
-  <text x="14" y="162" font-family="Georgia, 'Times New Roman', serif" font-weight="bold" font-size="58" fill="#ffffff" letter-spacing="1">STATE</text>
-  <text x="14" y="212" font-family="Georgia, 'Times New Roman', serif" font-weight="bold" font-size="32" fill="#ffffff" letter-spacing="1.5">UNIVERSITY</text>
+  <!-- Pure Vector Glyphs (No Font Dependencies) -->
+  <g fill="#ffffff">
+    <!-- N M -->
+    <path d="M 15 25 L 35 25 L 60 72 L 60 25 L 80 25 L 80 95 L 60 95 L 35 48 L 35 95 L 15 95 Z"/>
+    <path d="M 90 25 L 115 25 L 132 70 L 149 25 L 174 25 L 174 95 L 155 95 L 155 46 L 138 95 L 126 95 L 109 46 L 109 95 L 90 95 Z"/>
+    
+    <!-- S T A T E -->
+    <path d="M 15 118 C 15 110 25 106 40 106 C 55 106 65 112 65 120 C 65 130 50 133 35 136 C 25 138 22 142 22 146 C 22 152 32 155 45 155 C 58 155 67 149 67 142 L 80 142 C 80 158 64 167 44 167 C 24 167 9 157 9 144 C 9 133 22 128 38 125 C 48 123 52 120 52 116 C 52 112 44 110 35 110 C 26 110 17 114 17 120 Z"/>
+    <path d="M 85 108 L 130 108 L 130 120 L 114 120 L 114 165 L 101 165 L 101 120 L 85 120 Z"/>
+    <path d="M 135 165 L 155 108 L 170 108 L 190 165 L 174 165 L 169 150 L 146 150 L 141 165 Z M 150 138 L 165 138 L 157 117 Z"/>
+    <path d="M 195 108 L 235 108 L 235 120 L 210 120 L 210 130 L 230 130 L 230 141 L 210 141 L 210 153 L 235 153 L 235 165 L 195 165 Z"/>
+
+    <!-- U N I V E R S I T Y -->
+    <path d="M 15 180 L 27 180 L 27 210 C 27 218 34 222 42 222 C 50 222 57 218 57 210 L 57 180 L 69 180 L 69 210 C 69 224 57 232 42 232 C 27 232 15 224 15 210 Z"/>
+    <path d="M 75 180 L 89 180 L 105 215 L 105 180 L 117 180 L 117 230 L 103 230 L 87 195 L 87 230 L 75 230 Z"/>
+    <path d="M 124 180 L 136 180 L 136 230 L 124 230 Z"/>
+    <path d="M 141 180 L 155 180 L 165 215 L 175 180 L 189 180 L 173 230 L 157 230 Z"/>
+    <path d="M 194 180 L 230 180 L 230 190 L 206 190 L 206 199 L 225 199 L 225 208 L 206 208 L 206 220 L 230 220 L 230 230 L 194 230 Z"/>
+  </g>
 </svg>
