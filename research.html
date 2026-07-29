@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Research | AIM Lab - NMSU</title>
-  <link rel="stylesheet" href="styles.css?v=1.4.0">
+  <link rel="stylesheet" href="styles.css?v=1.4.1">
 </head>
 <body>
 
@@ -180,7 +180,7 @@
         </div>
       </div>
 
-      <!-- 2. PAST PROJECTS CATEGORY (EXPANDABLE FIGURES ACCORDION + INLINE LIGHTBOX) -->
+      <!-- 2. PAST PROJECTS CATEGORY (EXPANDABLE FIGURES ACCORDION + CENTER LIGHTBOX) -->
       <div class="research-category" id="cat-past">
         <h3 class="category-subtitle" style="margin-bottom: 24px;">Past Projects</h3>
 
@@ -202,15 +202,15 @@
             <div class="expandable-gallery" id="aerobraking-gallery">
               <div class="gallery-grid">
                 <div class="gallery-item">
-                  <img src="Past%20Projects/Aerobraking1.png" alt="Figure 1: Aerobraking Trajectory Optimization" class="gallery-img" onclick="openInlinePopup(this)">
+                  <img src="Past%20Projects/Aerobraking1.png" alt="Figure 1: Aerobraking Trajectory Optimization" class="gallery-img" onclick="openCenterLightbox(this.src, this.alt)">
                   <div class="img-caption">Figure 1: Aerobraking Trajectory Optimization</div>
                 </div>
                 <div class="gallery-item">
-                  <img src="Past%20Projects/Aerobraking2.png" alt="Figure 2: Multidisciplinary Spacecraft Design Integration" class="gallery-img" onclick="openInlinePopup(this)">
+                  <img src="Past%20Projects/Aerobraking2.png" alt="Figure 2: Multidisciplinary Spacecraft Design Integration" class="gallery-img" onclick="openCenterLightbox(this.src, this.alt)">
                   <div class="img-caption">Figure 2: Multidisciplinary Spacecraft Design Integration</div>
                 </div>
                 <div class="gallery-item">
-                  <img src="Past%20Projects/Aerobraking3.png" alt="Figure 3: Aerodynamic Heat Flux & Entry Bounds" class="gallery-img" onclick="openInlinePopup(this)">
+                  <img src="Past%20Projects/Aerobraking3.png" alt="Figure 3: Aerodynamic Heat Flux & Entry Bounds" class="gallery-img" onclick="openCenterLightbox(this.src, this.alt)">
                   <div class="img-caption">Figure 3: Aerodynamic Heat Flux & Entry Bounds</div>
                 </div>
               </div>
@@ -234,15 +234,15 @@
             <div class="expandable-gallery" id="vsdga-gallery">
               <div class="gallery-grid">
                 <div class="gallery-item">
-                  <img src="Past%20Projects/VSDGA0.png" alt="Figure 1: Vectorized Dynamic-Size Genetic Algorithm Architecture" class="gallery-img" onclick="openInlinePopup(this)">
+                  <img src="Past%20Projects/VSDGA0.png" alt="Figure 1: Vectorized Dynamic-Size Genetic Algorithm Architecture" class="gallery-img" onclick="openCenterLightbox(this.src, this.alt)">
                   <div class="img-caption">Figure 1: Vectorized Dynamic-Size Genetic Algorithm Architecture</div>
                 </div>
                 <div class="gallery-item">
-                  <img src="Past%20Projects/VSDGA1.png" alt="Figure 2: Flyby Sequence Search & Trajectory Solutions" class="gallery-img" onclick="openInlinePopup(this)">
+                  <img src="Past%20Projects/VSDGA1.png" alt="Figure 2: Flyby Sequence Search & Trajectory Solutions" class="gallery-img" onclick="openCenterLightbox(this.src, this.alt)">
                   <div class="img-caption">Figure 2: Flyby Sequence Search & Trajectory Solutions</div>
                 </div>
                 <div class="gallery-item">
-                  <img src="Past%20Projects/VSDGA2.png" alt="Figure 3: GPU Neural Network Lambert Speedup Comparison" class="gallery-img" onclick="openInlinePopup(this)">
+                  <img src="Past%20Projects/VSDGA2.png" alt="Figure 3: GPU Neural Network Lambert Speedup Comparison" class="gallery-img" onclick="openCenterLightbox(this.src, this.alt)">
                   <div class="img-caption">Figure 3: GPU Neural Network Lambert Speedup Comparison</div>
                 </div>
               </div>
@@ -255,41 +255,34 @@
     </div>
   </main>
 
-  <!-- INLINE LIGHTBOX MODAL OVERLAY -->
-  <div id="inline-lightbox" class="image-modal-overlay" onclick="closeInlinePopup(event)">
-    <span class="modal-close" onclick="closeInlinePopupDirect()">&times;</span>
-    <img class="modal-content" id="popup-image" alt="Enlarged Figure" onclick="event.stopPropagation()">
-    <div id="popup-caption" class="modal-caption" onclick="event.stopPropagation()"></div>
+  <!-- FIXED CENTER SCREEN LIGHTBOX OVERLAY -->
+  <div id="center-lightbox" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background-color:rgba(15, 23, 42, 0.92); backdrop-filter:blur(8px); z-index:9999999; align-items:center; justify-content:center; flex-direction:column; padding:20px; box-sizing:border-box;" onclick="closeCenterLightbox()">
+    <span style="position:absolute; top:20px; right:30px; color:#ffffff; font-size:42px; font-weight:bold; cursor:pointer; z-index:10000000; line-height:1;" onclick="closeCenterLightbox()">&times;</span>
+    <img id="center-lightbox-img" style="max-width:90vw; max-height:80vh; object-fit:contain; border-radius:10px; box-shadow:0 20px 50px rgba(0,0,0,0.6); background-color:#ffffff; padding:10px;" onclick="event.stopPropagation()">
+    <div id="center-lightbox-caption" style="margin-top:14px; text-align:center; color:#ffffff; font-family:'Outfit', sans-serif; font-size:1.15rem; font-weight:700;" onclick="event.stopPropagation()"></div>
   </div>
 
   <script>
-    function openInlinePopup(element) {
-      var modal = document.getElementById('inline-lightbox');
-      var img = document.getElementById('popup-image');
-      var caption = document.getElementById('popup-caption');
-      img.src = element.src;
-      caption.innerText = element.alt || '';
+    function openCenterLightbox(src, captionText) {
+      var modal = document.getElementById('center-lightbox');
+      var img = document.getElementById('center-lightbox-img');
+      var cap = document.getElementById('center-lightbox-caption');
+      img.src = src;
+      cap.innerText = captionText || '';
       modal.style.display = 'flex';
     }
 
-    function closeInlinePopup(event) {
-      var modal = document.getElementById('inline-lightbox');
-      if (event.target === modal) {
-        modal.style.display = 'none';
-      }
-    }
-
-    function closeInlinePopupDirect() {
-      document.getElementById('inline-lightbox').style.display = 'none';
+    function closeCenterLightbox() {
+      document.getElementById('center-lightbox').style.display = 'none';
     }
 
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape') {
-        document.getElementById('inline-lightbox').style.display = 'none';
+        closeCenterLightbox();
       }
     });
   </script>
 
-  <script src="main.js?v=1.0.4"></script>
+  <script src="main.js?v=1.0.5"></script>
 </body>
 </html>
