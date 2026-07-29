@@ -3,7 +3,7 @@
 
 :root {
   --nmsu-crimson: #880029;
-  --nmsu-crimson-hover: #5e001c;
+  --nmsu-crimson-dark: #5e001c;
   --nmsu-crimson-light: rgba(136, 0, 41, 0.08);
   --space-dark: #0f172a;
   --text-main: #1e293b;
@@ -33,7 +33,7 @@ body {
 }
 
 .institution-container {
-  max-width: 1280px;
+  max-width: 1340px;
   margin: 0 auto;
   padding: 0 40px;
   display: flex;
@@ -105,19 +105,19 @@ body {
 .main-header {
   background-color: #ffffff;
   border-bottom: 1px solid #e2e8f0;
-  padding: 32px 0;
+  padding: 34px 0;
   width: 100%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
 }
 
 .lab-container {
-  max-width: 1280px;
+  max-width: 1340px;
   margin: 0 auto;
   padding: 0 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 30px;
+  gap: 20px;
 }
 
 .lab-title-group {
@@ -129,7 +129,7 @@ body {
 .lab-title {
   font-family: 'Outfit', sans-serif;
   font-weight: 800;
-  font-size: 2.9rem;
+  font-size: 3rem;
   color: var(--space-dark);
   letter-spacing: -0.5px;
   line-height: 1.1;
@@ -144,22 +144,22 @@ body {
   margin-top: 4px;
 }
 
-/* Navigation Tabs (Aligned Further Right with Wider Spacing & NMSU Crimson Theme) */
+/* Navigation Tabs (Far-Right Alignment, Wide Spacing, Crimson Font Color) */
 .nav-tabs {
   display: flex;
   align-items: center;
-  gap: 18px; /* Increased spacing between tabs */
-  margin-left: auto; /* Push navigation completely to the right */
+  gap: 34px; /* Generous wide spacing between tabs */
+  margin-left: auto; /* Push navigation completely to the far right */
   justify-content: flex-end;
 }
 
 .nav-tab {
   text-decoration: none;
   font-family: 'Outfit', 'Inter', sans-serif;
-  font-weight: 600;
-  font-size: 1.05rem;
-  color: var(--nmsu-crimson); /* NMSU Crimson Theme color */
-  padding: 10px 18px;
+  font-weight: 700;
+  font-size: 1.08rem;
+  color: var(--nmsu-crimson); /* NMSU Crimson Red font color */
+  padding: 8px 16px;
   border-radius: 8px;
   transition: all 0.25s ease;
   position: relative;
@@ -167,20 +167,26 @@ body {
 
 .nav-tab:hover {
   color: #ffffff;
-  background-color: var(--nmsu-crimson); /* NMSU Crimson hover background */
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(136, 0, 41, 0.25);
+  background-color: var(--nmsu-crimson);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(136, 0, 41, 0.3);
 }
 
 .nav-tab.active {
   color: #ffffff;
   background-color: var(--nmsu-crimson);
   font-weight: 700;
-  box-shadow: 0 4px 14px rgba(136, 0, 41, 0.3);
+  box-shadow: 0 4px 14px rgba(136, 0, 41, 0.35);
 }
 
 /* Responsive tweaking */
-@media (max-width: 1024px) {
+@media (max-width: 1120px) {
+  .nav-tabs {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 960px) {
   .lab-container {
     flex-direction: column;
     align-items: flex-start;
@@ -190,11 +196,11 @@ body {
     margin-left: 0;
     width: 100%;
     justify-content: flex-start;
-    gap: 10px;
+    gap: 14px;
     flex-wrap: wrap;
   }
   .nav-tab {
-    padding: 8px 14px;
+    padding: 6px 12px;
     font-size: 0.95rem;
   }
 }
