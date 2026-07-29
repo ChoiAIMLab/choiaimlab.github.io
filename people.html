@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>People | AIM Lab - NMSU</title>
-  <link rel="stylesheet" href="styles.css?v=1.1.9">
+  <link rel="stylesheet" href="styles.css?v=1.2.0">
 </head>
 <body>
 
@@ -43,34 +43,34 @@
     </div>
   </header>
 
-  <!-- PEOPLE PAGE CONTENT -->
+  <!-- PEOPLE PAGE CONTENT (SINGLE LONG SCROLLING PAGE WITH CATEGORIES SMOOTH SCROLL) -->
   <main class="main-content">
     <div class="section-container">
       
-      <!-- SUB-MENU / CATEGORIES BELOW PEOPLE HEADER -->
+      <!-- STICKY CATEGORIES SCROLL MENU -->
       <div class="tree-container">
         <div class="tree-header">People Categories</div>
         <div class="tree-branches">
-          <button class="tree-btn active" data-target="pi">
+          <a href="#pi" class="tree-btn active">
             <span class="tree-icon">├──</span> Principal Investigator
-          </button>
-          <button class="tree-btn" data-target="phd">
+          </a>
+          <a href="#phd" class="tree-btn">
             <span class="tree-icon">├──</span> Ph.D. Students
-          </button>
-          <button class="tree-btn" data-target="ms">
+          </a>
+          <a href="#ms" class="tree-btn">
             <span class="tree-icon">├──</span> M.S. Students
-          </button>
-          <button class="tree-btn" data-target="undergrad">
+          </a>
+          <a href="#undergrad" class="tree-btn">
             <span class="tree-icon">├──</span> Undergraduate Students
-          </button>
-          <button class="tree-btn" data-target="alumni">
+          </a>
+          <a href="#alumni" class="tree-btn">
             <span class="tree-icon">└──</span> Alumni
-          </button>
+          </a>
         </div>
       </div>
 
-      <!-- 1. Principal Investigator Category (Active by Default) -->
-      <div class="people-category active" id="cat-pi">
+      <!-- 1. Principal Investigator Section -->
+      <section class="people-section" id="pi">
         <h2 class="section-title">Principal Investigator</h2>
         <div class="section-divider"></div>
 
@@ -106,47 +106,47 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <!-- 2. Ph.D. Students Category -->
-      <div class="people-category" id="cat-phd">
+      <!-- 2. Ph.D. Students Section -->
+      <section class="people-section" id="phd">
         <h2 class="section-title">Ph.D. Students</h2>
         <div class="section-divider"></div>
         <div class="info-card">
           <h3>Ph.D. Candidates & Researchers</h3>
           <p class="section-desc">We are actively recruiting passionate Ph.D. students in astrodynamics, trajectory optimization, and AI/ML. Interested candidates are encouraged to contact Dr. Sungmoon Choi.</p>
         </div>
-      </div>
+      </section>
 
-      <!-- 3. M.S. Students Category -->
-      <div class="people-category" id="cat-ms">
+      <!-- 3. M.S. Students Section -->
+      <section class="people-section" id="ms">
         <h2 class="section-title">M.S. Students</h2>
         <div class="section-divider"></div>
         <div class="info-card">
           <h3>M.S. Graduate Researchers</h3>
           <p class="section-desc">Graduate research opportunities are available for M.S. students interested in space flight mechanics and autonomous navigation.</p>
         </div>
-      </div>
+      </section>
 
-      <!-- 4. Undergraduate Students Category -->
-      <div class="people-category" id="cat-undergrad">
+      <!-- 4. Undergraduate Students Section -->
+      <section class="people-section" id="undergrad">
         <h2 class="section-title">Undergraduate Students</h2>
         <div class="section-divider"></div>
         <div class="info-card">
           <h3>Undergraduate Researchers</h3>
           <p class="section-desc">AIM Lab supports undergraduate research projects in aerospace engineering and orbital dynamics.</p>
         </div>
-      </div>
+      </section>
 
-      <!-- 5. Alumni Category -->
-      <div class="people-category" id="cat-alumni">
+      <!-- 5. Alumni Section -->
+      <section class="people-section" id="alumni">
         <h2 class="section-title">Alumni</h2>
         <div class="section-divider"></div>
         <div class="info-card">
           <h3>AIM Lab Alumni</h3>
           <p class="section-desc">Past researchers and student alumni of AIM Lab.</p>
         </div>
-      </div>
+      </section>
 
     </div>
   </main>

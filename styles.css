@@ -359,6 +359,7 @@ body {
 .tree-btn {
   background: none;
   border: none;
+  text-decoration: none;
   text-align: left;
   font-family: 'Outfit', 'Inter', sans-serif;
   font-weight: 600;
@@ -407,12 +408,18 @@ body {
   padding-bottom: 8px;
 }
 
-.pub-category, .people-category {
+.pub-category {
   display: none;
 }
 
-.pub-category.active, .people-category.active {
+.pub-category.active {
   display: block;
+}
+
+/* People Section Long Scrolling Offset */
+.people-section {
+  scroll-margin-top: 150px;
+  margin-bottom: 60px;
 }
 
 .pub-list {

@@ -1,32 +1,18 @@
-// AIM Lab Categories Switching (Publications & People)
+// AIM Lab Interactive Logic (Publications Category Switching & People Smooth Scroll)
 document.addEventListener('DOMContentLoaded', () => {
-  const treeBtns = document.querySelectorAll('.tree-btn');
-  const pubCategories = document.querySelectorAll('.pub-category');
-  const peopleCategories = document.querySelectorAll('.people-category');
 
-  // Handle Categories Sub-Tab Clicks
-  treeBtns.forEach(btn => {
+  // 1. Publications Category Switcher
+  const pubTreeBtns = document.querySelectorAll('.pub-category-btn');
+  const pubCategories = document.querySelectorAll('.pub-category');
+
+  pubTreeBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       const targetCat = btn.getAttribute('data-target');
-
-      // Highlight active category button
-      treeBtns.forEach(b => b.classList.remove('active'));
+      pubTreeBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
 
-      // Toggle Publications category visibility
       pubCategories.forEach(cat => {
-        const catId = cat.getAttribute('id');
-        if (catId === `cat-${targetCat}`) {
-          cat.classList.add('active');
-        } else {
-          cat.classList.remove('active');
-        }
-      });
-
-      // Toggle People category visibility
-      peopleCategories.forEach(cat => {
-        const catId = cat.getAttribute('id');
-        if (catId === `cat-${targetCat}`) {
+        if (cat.getAttribute('id') === `cat-${targetCat}`) {
           cat.classList.add('active');
         } else {
           cat.classList.remove('active');
@@ -34,4 +20,45 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   });
+
+  // 2. People Sub-Menu Smooth Anchor Scrolling & Active Highlighting on Scroll
+  const peopleSubBtns = document.querySelectorAll('.tree-branches a[href^="#"]');
+  const peopleSections = document.querySelectorAll('.people-section');
+
+  peopleSubBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const targetId = btn.getAttribute('href').substring(1);
+      const targetSec = document.getElementById(targetId);
+
+      if (targetSec) {
+        e.preventDefault();
+        peopleSubBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        targetSec.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Highlight active People sub-button on scroll
+  if (peopleSections.length > 0) {
+    window.addEventListener('scroll', () => {
+      let currentSec = '';
+      peopleSections.forEach(sec => {
+        const secTop = sec.offsetTop;
+        if (window.pageYOffset >= (secTop - 180)) {
+          currentSec = sec.getAttribute('id');
+        }
+      });
+
+      if (currentSec) {
+        peopleSubBtns.forEach(btn => {
+          btn.classList.remove('active');
+          if (btn.getAttribute('href') === `#${currentSec}`) {
+            btn.classList.add('active');
+          }
+        });
+      }
+    });
+  }
+
 });
