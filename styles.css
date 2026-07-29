@@ -218,6 +218,12 @@ body {
   gap: 16px;
 }
 
+.pub-header-btns {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 .scholar-btn {
   background-color: var(--nmsu-crimson);
   color: #ffffff;
@@ -235,6 +241,25 @@ body {
   background-color: var(--nmsu-crimson-dark);
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(136, 0, 41, 0.35);
+}
+
+.researchgate-btn {
+  background-color: #00ccbb;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-family: 'Outfit', 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 0.98rem;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0, 204, 187, 0.2);
+}
+
+.researchgate-btn:hover {
+  background-color: #00b3a4;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 204, 187, 0.35);
 }
 
 .section-desc {
