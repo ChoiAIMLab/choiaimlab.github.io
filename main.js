@@ -1,33 +1,53 @@
-// Smooth Scrolling & Publications Sub-Tab Switching
+// AIM Lab Navigation & Publications Tree Switching
 document.addEventListener('DOMContentLoaded', () => {
-  const treeBtns = document.querySelectorAll('.pub-tree-btn');
-  const pubCategories = document.querySelectorAll('.pub-category');
   const navLinks = document.querySelectorAll('.nav-tab');
+  const sections = document.querySelectorAll('.section');
+  const treeBtns = document.querySelectorAll('.tree-btn');
+  const pubCategories = document.querySelectorAll('.pub-category');
 
-  // 1. Smooth Scrolling for Navigation Tabs
+  // 1. Navigation Tab Clicking (Smooth Scroll into Section)
   navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
       const targetId = link.getAttribute('href').substring(1);
-      const targetElement = document.getElementById(targetId);
+      const targetSection = document.getElementById(targetId);
 
-      if (targetElement) {
-        // Highlight active tab
+      if (targetSection) {
         navLinks.forEach(l => l.classList.remove('active'));
         link.classList.add('active');
 
-        // Smooth scroll to section
-        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // Scroll smoothly to section
+        targetSection.scrollIntoView({ behavior: 'smooth' });
       }
     });
   });
 
-  // 2. Publications Sub-Tab Category Switching
+  // Highlight Active Tab on Scroll
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      if (window.pageYOffset >= (sectionTop - 160)) {
+        current = section.getAttribute('id');
+      }
+    });
+
+    if (current) {
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    }
+  });
+
+  // 2. Publications Tree Sub-Tab Switch
   treeBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       const targetCat = btn.getAttribute('data-target');
 
-      // Update button active state
+      // Highlight active tree button
       treeBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
 

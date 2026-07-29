@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AeroAstro Intelligent Mechanics Lab (AIM Lab) | NMSU</title>
-  <link rel="stylesheet" href="styles.css?v=1.0.4">
+  <link rel="stylesheet" href="styles.css?v=1.0.5">
 </head>
 <body>
 
@@ -23,7 +23,7 @@
     </div>
   </div>
 
-  <!-- 2. AIM LAB BRANDING & NAVIGATION HEADER -->
+  <!-- 2. AIM LAB BRANDING & STICKY NAVIGATION HEADER -->
   <header class="main-header">
     <div class="lab-container">
       <div class="lab-title-group">
@@ -31,7 +31,7 @@
         <p class="lab-subtitle">AeroAstro Intelligent Mechanics Lab</p>
       </div>
 
-      <!-- Navigation Tabs (Anchor Links for Smooth Navigation) -->
+      <!-- Navigation Tabs (Anchor Links) -->
       <nav class="nav-tabs">
         <a href="#home" class="nav-tab active">Home</a>
         <a href="#news" class="nav-tab">News</a>
@@ -134,21 +134,31 @@
       </div>
     </section>
 
-    <!-- PUBLICATIONS SECTION -->
+    <!-- PUBLICATIONS SECTION WITH TREE STRUCTURE -->
     <section id="publications" class="section">
       <div class="section-container">
         <h2 class="section-title">Publications</h2>
         <div class="section-divider"></div>
 
-        <!-- Sub-Tabs under Publications -->
-        <div class="pub-tree-tabs">
-          <button class="pub-tree-btn active" data-target="journal">Journal Papers</button>
-          <button class="pub-tree-btn" data-target="conference">Conference Proceedings</button>
-          <button class="pub-tree-btn" data-target="poster">Poster Presentations</button>
+        <!-- TREE STRUCTURE BELOW PUBLICATIONS -->
+        <div class="tree-container">
+          <div class="tree-header">Publications Tree</div>
+          <div class="tree-branches">
+            <button class="tree-btn active" data-target="journal">
+              <span class="tree-icon">├──</span> Journal Papers
+            </button>
+            <button class="tree-btn" data-target="conference">
+              <span class="tree-icon">├──</span> Conference Proceedings
+            </button>
+            <button class="tree-btn" data-target="poster">
+              <span class="tree-icon">└──</span> Poster Presentations
+            </button>
+          </div>
         </div>
 
         <!-- Journal Papers Category -->
         <div class="pub-category active" id="cat-journal">
+          <h3 class="category-subtitle">Journal Papers</h3>
           <ol class="pub-list">
             <li class="pub-item">
               <span class="pub-tag">[J3]</span>
@@ -182,6 +192,7 @@
 
         <!-- Conference Proceedings Category -->
         <div class="pub-category" id="cat-conference">
+          <h3 class="category-subtitle">Conference Proceedings</h3>
           <ol class="pub-list">
             <li class="pub-item">
               <span class="pub-tag">[C12]</span>
@@ -244,6 +255,7 @@
 
         <!-- Poster Presentations Category -->
         <div class="pub-category" id="cat-poster">
+          <h3 class="category-subtitle">Poster Presentations</h3>
           <ol class="pub-list">
             <li class="pub-item">
               <span class="pub-tag">[P4]</span>
