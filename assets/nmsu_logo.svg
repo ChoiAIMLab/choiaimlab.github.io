@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="320" height="80">
+  <defs>
+    <linearGradient id="nmsuGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#880029" />
+      <stop offset="100%" stop-color="#5e001c" />
+    </linearGradient>
+  </defs>
+  <!-- NMSU Monogram Shield/Badge Icon -->
+  <g transform="translate(10, 8)">
+    <rect x="0" y="0" width="64" height="64" rx="14" fill="url(#nmsuGrad)"/>
+    <!-- Stylized NMSU Text/Shape inside badge -->
+    <path d="M 16 48 L 16 18 L 26 18 L 38 38 L 38 18 L 48 18 L 48 48 L 38 48 L 26 28 L 26 48 Z" fill="#FFFFFF"/>
+  </g>
+  <!-- Typography for NMSU -->
+  <text x="86" y="35" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Outfit', sans-serif" font-weight="900" font-size="22" fill="#880029" letter-spacing="1">NMSU</text>
+  <text x="86" y="53" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Inter', sans-serif" font-weight="600" font-size="11" fill="#4B5563" letter-spacing="0.5">NEW MEXICO STATE UNIVERSITY</text>
+</svg>
