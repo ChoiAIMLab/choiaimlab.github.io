@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Courses | AIM Lab - NMSU</title>
-  <link rel="stylesheet" href="styles.css?v=1.0.6">
+  <link rel="stylesheet" href="styles.css?v=1.2.4">
 </head>
 <body>
 
@@ -43,17 +43,40 @@
     </div>
   </header>
 
-  <!-- PAGE CONTENT -->
+  <!-- COURSES PAGE CONTENT -->
   <main class="main-content">
     <div class="section-container">
-      <h2 class="section-title">Courses & Teaching</h2>
+      <h2 class="section-title">Courses</h2>
       <div class="section-divider"></div>
-      <ul class="info-list">
-        <li><strong>Orbital Mechanics</strong> — Department of Mechanical & Aerospace Engineering</li>
-        <li><strong>System Engineering</strong> — Department of Mechanical & Aerospace Engineering</li>
-      </ul>
+
+      <div class="info-card" style="margin-bottom: 30px;">
+        <h3 style="font-size: 1.5rem; color: var(--nmsu-crimson); margin-bottom: 12px;">Upcoming Courses</h3>
+        <p class="section-desc" style="margin-bottom: 20px;">
+          Courses offered by Dr. Sungmoon Choi in the Department of Mechanical and Aerospace Engineering at New Mexico State University.
+        </p>
+
+        <div class="card-grid">
+          <div class="info-card" style="border-left: 4px solid var(--nmsu-crimson);">
+            <h4 style="font-family: 'Outfit', sans-serif; font-size: 1.3rem; color: var(--space-dark); margin-bottom: 6px;">AE 362: Orbital Mechanics</h4>
+            <p style="color: var(--nmsu-crimson); font-weight: 700; margin-bottom: 10px;">Upcoming Course</p>
+            <p class="section-desc" style="font-size: 0.98rem;">
+              Introduction to two-body orbital dynamics, Keplerian motion, coordinate transformations, orbital maneuvers, interplanetary trajectory design, and perturbations in space environment.
+            </p>
+          </div>
+
+          <div class="info-card" style="border-left: 4px solid var(--nmsu-crimson);">
+            <h4 style="font-family: 'Outfit', sans-serif; font-size: 1.3rem; color: var(--space-dark); margin-bottom: 6px;">AE 424: Aerospace System Engineering</h4>
+            <p style="color: var(--nmsu-crimson); font-weight: 700; margin-bottom: 10px;">Upcoming Course</p>
+            <p class="section-desc" style="font-size: 0.98rem;">
+              Comprehensive principles of aerospace systems engineering, space mission architecture design, requirements analysis, subsystem integration, trade studies, and multidisciplinary optimization.
+            </p>
+          </div>
+        </div>
+      </div>
+
     </div>
   </main>
 
+  <script src="main.js"></script>
 </body>
 </html>

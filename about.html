@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About | AIM Lab - NMSU</title>
-  <link rel="stylesheet" href="styles.css?v=1.0.6">
+  <link rel="stylesheet" href="styles.css?v=1.2.4">
 </head>
 <body>
 
@@ -43,16 +43,61 @@
     </div>
   </header>
 
-  <!-- PAGE CONTENT -->
+  <!-- ABOUT PAGE CONTENT -->
   <main class="main-content">
     <div class="section-container">
       <h2 class="section-title">About AIM Lab</h2>
       <div class="section-divider"></div>
-      <p class="section-desc">
-        AIM Lab investigates fundamental and applied problems in orbital mechanics, space mission trajectory optimization, and autonomous deep-space navigation.
-      </p>
+
+      <!-- Lab Overview -->
+      <div class="info-card" style="margin-bottom: 35px;">
+        <h3 style="font-size: 1.6rem; color: var(--space-dark); margin-bottom: 14px;">Lab Overview</h3>
+        <p class="section-desc" style="margin-bottom: 16px;">
+          The <strong>AeroAstro Intelligent Mechanics Lab (AIM Lab)</strong> at New Mexico State University (NMSU) is led by <strong>Prof. Sungmoon Choi</strong>. Our laboratory focuses on pioneering theoretical, computational, and algorithmic frameworks for next-generation space exploration and autonomous aerospace systems.
+        </p>
+        <p class="section-desc">
+          By combining rigorous celestial mechanics with cutting-edge artificial intelligence, machine learning, and optimization techniques, AIM Lab addresses challenging open problems in deep-space flight mechanics, optical navigation, trajectory design, and multidisciplinary space system engineering.
+        </p>
+      </div>
+
+      <!-- Core Research Interests -->
+      <div class="info-card" style="margin-bottom: 35px;">
+        <h3 style="font-size: 1.6rem; color: var(--space-dark); margin-bottom: 14px;">Core Research Interests</h3>
+        <ul class="info-list">
+          <li><strong>Astrodynamics & Celestial Mechanics:</strong> Multi-body orbital dynamics, libration point orbits, and low-thrust trajectory mechanics.</li>
+          <li><strong>Space Mission Design & Trajectory Optimization:</strong> Interplanetary trajectory design, gravity-assist sequencing, low-thrust trajectory optimization, and aerobraking.</li>
+          <li><strong>Orbit Determination & Deep-Space Navigation:</strong> Angles-only optical navigation, initial orbit determination without prior attitude/distance data, and autonomous spacecraft navigation.</li>
+          <li><strong>Spacecraft Guidance, Navigation, and Control (GNC):</strong> Real-time trajectory generation, robust feedback control, and autonomous maneuver placement.</li>
+          <li><strong>Physics-Informed Machine Learning & AI:</strong> Physics-informed neural networks (PINNs), Extreme Theory of Functional Connections (XTFC), and deep learning approximations for orbital mechanics problems.</li>
+        </ul>
+      </div>
+
+      <!-- Prospective Students Section -->
+      <div class="info-card" style="border-left: 5px solid var(--nmsu-crimson); background-color: #ffffff;">
+        <h3 style="font-size: 1.6rem; color: var(--nmsu-crimson); margin-bottom: 14px;">🚀 Prospective Students</h3>
+        <p class="section-desc" style="margin-bottom: 16px;">
+          <strong>AIM Lab is actively looking for motivated Ph.D., M.S., and Undergraduate research students</strong> who are passionate about astrodynamics, space mission design, optical navigation, and AI/ML applications in aerospace engineering.
+        </p>
+        <p class="section-desc" style="margin-bottom: 16px;">
+          Strong candidates typically possess a solid background in aerospace engineering, mechanical engineering, computer science, physics, applied mathematics, or related engineering disciplines, along with proficiency in programming (e.g., Python, MATLAB, C/C++).
+        </p>
+        
+        <div style="background-color: var(--nmsu-crimson-light); padding: 20px; border-radius: 8px; margin-top: 14px;">
+          <h4 style="font-family: 'Outfit', sans-serif; color: var(--nmsu-crimson); margin-bottom: 10px; font-size: 1.15rem;">How to Apply:</h4>
+          <p class="section-desc" style="font-size: 1rem; margin-bottom: 10px;">
+            If you are interested in joining AIM Lab, please send an email to <strong>sungmoon.at.nmsu.edu</strong> with the subject line <em>"[Prospective Student] Your Name - Program (Ph.D./M.S./Undergrad)"</em> including:
+          </p>
+          <ul style="margin-left: 20px; color: var(--text-main); font-size: 0.98rem; line-height: 1.7;">
+            <li>Curriculum Vitae (CV)</li>
+            <li>Unofficial Academic Transcripts</li>
+            <li>A brief statement describing your research interests and background</li>
+          </ul>
+        </div>
+      </div>
+
     </div>
   </main>
 
+  <script src="main.js"></script>
 </body>
 </html>
