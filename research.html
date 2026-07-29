@@ -251,16 +251,37 @@
 
           <!-- Past Project 3: Ambiguity-Free Deep Space Navigation -->
           <div class="info-card expandable-card" style="border-left: 4px solid #64748b;">
-            <div style="display: flex; justify-content: space-between; align-items: center; gap: 14px; flex-wrap: wrap;">
+            <div style="display: flex; justify-content: space-between; align-items: center; gap: 14px; flex-wrap: wrap; cursor: pointer;" class="project-header-toggle" data-toggle="anglesonly-gallery">
               <div>
                 <h4 style="font-family: 'Outfit', sans-serif; font-size: 1.35rem; color: var(--space-dark); margin-bottom: 2px;">Ambiguity-Free Geometric Approach to Deep Space Navigation</h4>
                 <span style="font-family: 'Outfit', sans-serif; font-size: 1.1rem; color: var(--text-muted); font-style: italic;">Using Angles-Only Measurements</span>
               </div>
+              <button class="expand-btn">
+                🖼️ View Project Figures (3) <span class="expand-arrow">▼</span>
+              </button>
             </div>
 
             <ul style="margin-left: 20px; color: var(--text-main); font-size: 1.05rem; line-height: 1.6; margin-top: 14px;">
               <li>Developed an algorithm to determine a position and attitude of the spacecraft without any priori information with a rough initial guess of distance</li>
             </ul>
+
+            <!-- Expandable Gallery Container -->
+            <div class="expandable-gallery" id="anglesonly-gallery">
+              <div class="gallery-grid">
+                <div class="gallery-item">
+                  <img src="Past%20Projects/Angles_Only1.png" alt="Figure 1: Angles-Only Navigation Algorithm Overview" class="gallery-img" onclick="openCenterLightbox(this.src, this.alt)">
+                  <div class="img-caption">Figure 1: Angles-Only Navigation Algorithm Overview</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="Past%20Projects/Angles_Only2.png" alt="Figure 2: Position & Attitude Determination" class="gallery-img" onclick="openCenterLightbox(this.src, this.alt)">
+                  <div class="img-caption">Figure 2: Position & Attitude Determination</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="Past%20Projects/Angles_Only3.png" alt="Figure 3: Deep Space Navigation Results" class="gallery-img" onclick="openCenterLightbox(this.src, this.alt)">
+                  <div class="img-caption">Figure 3: Deep Space Navigation Results</div>
+                </div>
+              </div>
+            </div>
           </div>
 
         </div>
