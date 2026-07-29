@@ -1,23 +1,11 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 260" width="240" height="260">
-  <!-- Crimson Base with State Silhouette Cutout -->
-  <path d="M 0 0 L 240 0 L 240 228 L 106 228 L 106 260 L 40 260 L 40 228 L 0 228 Z" fill="#880029"/>
-  <!-- Pure Vector Glyphs (No Font Dependencies) -->
-  <g fill="#ffffff">
-    <!-- N M -->
-    <path d="M 15 25 L 35 25 L 60 72 L 60 25 L 80 25 L 80 95 L 60 95 L 35 48 L 35 95 L 15 95 Z"/>
-    <path d="M 90 25 L 115 25 L 132 70 L 149 25 L 174 25 L 174 95 L 155 95 L 155 46 L 138 95 L 126 95 L 109 46 L 109 95 L 90 95 Z"/>
-    
-    <!-- S T A T E -->
-    <path d="M 15 118 C 15 110 25 106 40 106 C 55 106 65 112 65 120 C 65 130 50 133 35 136 C 25 138 22 142 22 146 C 22 152 32 155 45 155 C 58 155 67 149 67 142 L 80 142 C 80 158 64 167 44 167 C 24 167 9 157 9 144 C 9 133 22 128 38 125 C 48 123 52 120 52 116 C 52 112 44 110 35 110 C 26 110 17 114 17 120 Z"/>
-    <path d="M 85 108 L 130 108 L 130 120 L 114 120 L 114 165 L 101 165 L 101 120 L 85 120 Z"/>
-    <path d="M 135 165 L 155 108 L 170 108 L 190 165 L 174 165 L 169 150 L 146 150 L 141 165 Z M 150 138 L 165 138 L 157 117 Z"/>
-    <path d="M 195 108 L 235 108 L 235 120 L 210 120 L 210 130 L 230 130 L 230 141 L 210 141 L 210 153 L 235 153 L 235 165 L 195 165 Z"/>
-
-    <!-- U N I V E R S I T Y -->
-    <path d="M 15 180 L 27 180 L 27 210 C 27 218 34 222 42 222 C 50 222 57 218 57 210 L 57 180 L 69 180 L 69 210 C 69 224 57 232 42 232 C 27 232 15 224 15 210 Z"/>
-    <path d="M 75 180 L 89 180 L 105 215 L 105 180 L 117 180 L 117 230 L 103 230 L 87 195 L 87 230 L 75 230 Z"/>
-    <path d="M 124 180 L 136 180 L 136 230 L 124 230 Z"/>
-    <path d="M 141 180 L 155 180 L 165 215 L 175 180 L 189 180 L 173 230 L 157 230 Z"/>
-    <path d="M 194 180 L 230 180 L 230 190 L 206 190 L 206 199 L 225 199 L 225 208 L 206 208 L 206 220 L 230 220 L 230 230 L 194 230 Z"/>
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 80" width="280" height="80">
+  <!-- Crimson Badge Icon -->
+  <g transform="translate(4, 8)">
+    <rect width="64" height="64" rx="12" fill="#880029"/>
+    <!-- NMSU Bold Monogram -->
+    <path d="M 14 48 L 14 16 L 25 16 L 37 38 L 37 16 L 48 16 L 48 48 L 37 48 L 25 26 L 25 48 Z" fill="#ffffff"/>
   </g>
+  <!-- NMSU Text -->
+  <text x="80" y="36" font-family="'Outfit', 'Helvetica Neue', Arial, sans-serif" font-weight="900" font-size="24" fill="#ffffff" letter-spacing="1.5">NMSU</text>
+  <text x="80" y="55" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-weight="600" font-size="11" fill="rgba(255,255,255,0.92)" letter-spacing="0.8">STATE UNIVERSITY</text>
 </svg>
