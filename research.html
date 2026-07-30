@@ -185,16 +185,36 @@
               <div class="expandable-gallery" id="dsm-gallery">
                 <div class="gallery-grid">
                   <div class="gallery-item">
-                    <img src="Current%20Projects/DSM_NN1.png" alt="Figure 1: Deep Space Maneuver ML Prediction Model" class="gallery-img" onclick="openCenterLightbox(this.src, this.alt)">
+                    <img src="Current%20Projects/DSM_NN1.png?v=2.0" alt="Figure 1: Deep Space Maneuver ML Prediction Model" class="gallery-img" onclick="openCenterLightbox(this.src, this.alt)">
                     <div class="img-caption">Figure 1: Deep Space Maneuver ML Prediction Model</div>
                   </div>
-                  <div class="gallery-item">
-                    <img src="Current%20Projects/DSM_NN2.png" alt="Figure 2: Optimal Maneuver Location & Timing Prediction" class="gallery-img" onclick="openCenterLightbox(this.src, this.alt)">
-                    <div class="img-caption">Figure 2: Optimal Maneuver Location & Timing Prediction</div>
+                  <!-- Figure 2: Combined 2-subfigure panel -->
+                  <div class="gallery-item" style="cursor:zoom-in;" onclick="openMultiLightbox2(['Current%20Projects/DSM_NN2_1.png','Current%20Projects/DSM_NN2_2.png'], 'Figure 2: Optimal Maneuver Location & Timing Prediction')">
+                    <div class="subfigure-panel" style="grid-template-columns: repeat(2, 1fr); pointer-events:none;">
+                      <div>
+                        <img src="Current%20Projects/DSM_NN2_1.png" alt="(a)">
+                        <div class="subfigure-label">(a)</div>
+                      </div>
+                      <div>
+                        <img src="Current%20Projects/DSM_NN2_2.png" alt="(b)">
+                        <div class="subfigure-label">(b)</div>
+                      </div>
+                    </div>
+                    <div class="img-caption">Figure 2: Optimal Maneuver Location & Timing (click to enlarge)</div>
                   </div>
-                  <div class="gallery-item">
-                    <img src="Current%20Projects/DSM_NN3.png" alt="Figure 3: Maneuver Execution Accuracy" class="gallery-img" onclick="openCenterLightbox(this.src, this.alt)">
-                    <div class="img-caption">Figure 3: Maneuver Execution Accuracy</div>
+                  <!-- Figure 3: Combined 2-subfigure panel -->
+                  <div class="gallery-item" style="cursor:zoom-in;" onclick="openMultiLightbox2(['Current%20Projects/DSM_NN3_1.png','Current%20Projects/DSM_NN3_2.png'], 'Figure 3: Maneuver Execution Performance & Accuracy')">
+                    <div class="subfigure-panel" style="grid-template-columns: repeat(2, 1fr); pointer-events:none;">
+                      <div>
+                        <img src="Current%20Projects/DSM_NN3_1.png" alt="(a)">
+                        <div class="subfigure-label">(a)</div>
+                      </div>
+                      <div>
+                        <img src="Current%20Projects/DSM_NN3_2.png" alt="(b)">
+                        <div class="subfigure-label">(b)</div>
+                      </div>
+                    </div>
+                    <div class="img-caption">Figure 3: Maneuver Execution Accuracy (click to enlarge)</div>
                   </div>
                 </div>
               </div>
