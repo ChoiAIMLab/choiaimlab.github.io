@@ -509,11 +509,11 @@ body {
   bottom: 0 !important;
   width: 100vw !important;
   height: 100vh !important;
-  background-color: rgba(15, 23, 42, 0.92) !important;
-  backdrop-filter: blur(8px) !important;
+  background-color: rgba(15, 23, 42, 0.94) !important;
+  backdrop-filter: blur(10px) !important;
   z-index: 999999 !important;
   box-sizing: border-box !important;
-  padding: 30px !important;
+  padding: 20px !important;
 }
 
 .modal-content {
@@ -537,7 +537,7 @@ body {
   text-align: center !important;
   color: #ffffff !important;
   font-family: 'Outfit', sans-serif !important;
-  font-size: 1.2rem !important;
+  font-size: 1.25rem !important;
   font-weight: 700 !important;
 }
 
@@ -546,7 +546,7 @@ body {
   top: 20px !important;
   right: 30px !important;
   color: #ffffff !important;
-  font-size: 44px !important;
+  font-size: 48px !important;
   font-weight: bold !important;
   cursor: pointer !important;
   z-index: 1000000 !important;
@@ -718,6 +718,57 @@ body {
   font-size: 1.02rem;
   color: var(--text-main);
   line-height: 1.7;
+}
+
+/* 8. PROFILE LINK BUTTONS STYLING */
+.profile-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-family: 'Outfit', 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 0.92rem;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.cv-btn {
+  background-color: var(--nmsu-crimson);
+  color: #ffffff;
+  border: 1px solid var(--nmsu-crimson);
+}
+
+.cv-btn:hover {
+  background-color: var(--nmsu-crimson-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(136, 0, 41, 0.3);
+}
+
+.linkedin-btn {
+  background-color: #0077b5;
+  color: #ffffff;
+  border: 1px solid #0077b5;
+}
+
+.linkedin-btn:hover {
+  background-color: #005582;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 119, 181, 0.3);
+}
+
+.rg-btn {
+  background-color: #00ccbb;
+  color: #ffffff;
+  border: 1px solid #00ccbb;
+}
+
+.rg-btn:hover {
+  background-color: #00998c;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 204, 187, 0.3);
 }
 
 /* Responsive tweaking */
