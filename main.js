@@ -145,4 +145,50 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // 6. Dynamic Synchronization of Latest News on Home Page (index.html) from news.html
+  const homeNewsList = document.getElementById('home-latest-news-list');
+  if (homeNewsList) {
+    fetch('news.html')
+      .then(response => {
+        if (!response.ok) throw new Error('Network response was not ok');
+        return response.text();
+      })
+      .then(htmlText => {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(htmlText, 'text/html');
+        const newsItems = doc.querySelectorAll('.info-list > li');
+
+        if (newsItems && newsItems.length > 0) {
+          homeNewsList.innerHTML = ''; // Clear fallback content
+          // Get top 4 latest news items from news.html
+          const topItems = Array.from(newsItems).slice(0, 4);
+
+          topItems.forEach(item => {
+            const li = document.createElement('li');
+            const clone = item.cloneNode(true);
+
+            // Strip out photo grids and video cards for clean home preview
+            clone.querySelectorAll('.news-photo-grid, .news-video-card, video').forEach(el => el.remove());
+            
+            // Clean up flex containers if any
+            const flexContainers = clone.querySelectorAll('div[style*="display: flex"]');
+            flexContainers.forEach(container => {
+              container.style.display = 'block';
+              container.style.gap = '0';
+            });
+
+            // Strip out large graduate next destinations box if present to keep home preview concise
+            const subBoxes = clone.querySelectorAll('div[style*="background-color: #f8fafc"]');
+            subBoxes.forEach(box => box.remove());
+
+            li.innerHTML = clone.innerHTML.trim();
+            homeNewsList.appendChild(li);
+          });
+        }
+      })
+      .catch(err => {
+        // Keeps pre-rendered HTML in index.html seamlessly as fallback
+      });
+  }
+
 });
