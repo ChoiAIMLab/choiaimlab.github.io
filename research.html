@@ -139,20 +139,58 @@
           </h3>
           <div style="display:flex;flex-direction:column;gap:20px;">
 
-            <!-- Project 4: Shape-Based (no figures yet) -->
-            <div class="info-card" style="border-left:4px solid var(--nmsu-crimson);">
-              <h4 style="font-family:'Outfit',sans-serif;font-size:1.35rem;color:var(--space-dark);margin-bottom:8px;">Low-Thrust Trajectory Design Using a Shape-Based Approach</h4>
-              <ul style="margin-left:20px;color:var(--text-main);font-size:1.05rem;line-height:1.6;margin-top:6px;">
+            <!-- Project 4: Shape-Based Approach -->
+            <div class="info-card expandable-card" style="border-left:4px solid var(--nmsu-crimson);">
+              <div style="display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;cursor:pointer;" class="project-header-toggle" data-toggle="shapebased-gallery">
+                <h4 style="font-family:'Outfit',sans-serif;font-size:1.35rem;color:var(--space-dark);margin-bottom:0;">Low-Thrust Trajectory Design Using a Shape-Based Approach</h4>
+                <button class="expand-btn">🖼️ View Project Figures (3) <span class="expand-arrow">▼</span></button>
+              </div>
+              <ul style="margin-left:20px;color:var(--text-main);font-size:1.05rem;line-height:1.6;margin-top:14px;">
                 <li>Establishing shape-based trajectory formulation incorporating necessary conditions of optimality</li>
               </ul>
+              <div class="expandable-gallery" id="shapebased-gallery">
+                <div class="gallery-grid">
+                  <div class="gallery-item">
+                    <img src="Current%20Projects/shape_based1.png" alt="Figure 1: Shape-Based Low-Thrust Trajectory Formulation" class="gallery-img" onclick="openCenterLightbox(this.src, this.alt)">
+                    <div class="img-caption">Figure 1: Shape-Based Low-Thrust Trajectory Formulation</div>
+                  </div>
+                  <div class="gallery-item">
+                    <img src="Current%20Projects/shape_based2.png" alt="Figure 2: Optimality Condition Integration" class="gallery-img" onclick="openCenterLightbox(this.src, this.alt)">
+                    <div class="img-caption">Figure 2: Optimality Condition Integration</div>
+                  </div>
+                  <div class="gallery-item">
+                    <img src="Current%20Projects/shape_based3.png" alt="Figure 3: Low-Thrust Transfer Profile" class="gallery-img" onclick="openCenterLightbox(this.src, this.alt)">
+                    <div class="img-caption">Figure 3: Low-Thrust Transfer Profile</div>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <!-- Project 5: XTFC Low-Thrust (no figures) -->
-            <div class="info-card" style="border-left:4px solid var(--nmsu-crimson);">
-              <h4 style="font-family:'Outfit',sans-serif;font-size:1.35rem;color:var(--space-dark);margin-bottom:8px;">Low-Thrust Trajectory Optimization Using Extreme Theory of Functional Connections</h4>
-              <ul style="margin-left:20px;color:var(--text-main);font-size:1.05rem;line-height:1.6;margin-top:6px;">
+            <!-- Project 5: Low-Thrust XTFC -->
+            <div class="info-card expandable-card" style="border-left:4px solid var(--nmsu-crimson);">
+              <div style="display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;cursor:pointer;" class="project-header-toggle" data-toggle="lowthrust-xtfc-gallery">
+                <h4 style="font-family:'Outfit',sans-serif;font-size:1.35rem;color:var(--space-dark);margin-bottom:0;">Low-Thrust Trajectory Optimization Using Extreme Theory of Functional Connections</h4>
+                <button class="expand-btn">🖼️ View Project Figures (3) <span class="expand-arrow">▼</span></button>
+              </div>
+              <ul style="margin-left:20px;color:var(--text-main);font-size:1.05rem;line-height:1.6;margin-top:14px;">
                 <li>Leveraging extreme theory of functional connection for efficient solution of low-thrust optimal control problems</li>
               </ul>
+              <div class="expandable-gallery" id="lowthrust-xtfc-gallery">
+                <div class="gallery-grid">
+                  <div class="gallery-item">
+                    <img src="Current%20Projects/Low_thrust_XTFC1.png" alt="Figure 1: Low-Thrust XTFC Optimal Control Overview" class="gallery-img" onclick="openCenterLightbox(this.src, this.alt)">
+                    <div class="img-caption">Figure 1: Low-Thrust XTFC Optimal Control Overview</div>
+                  </div>
+                  <div class="gallery-item">
+                    <img src="Current%20Projects/Low_thrust_XTFC2.png" alt="Figure 2: Trajectory & Thrust Vector Solutions" class="gallery-img" onclick="openCenterLightbox(this.src, this.alt)">
+                    <div class="img-caption">Figure 2: Trajectory & Thrust Vector Solutions</div>
+                  </div>
+                  <div class="gallery-item">
+                    <img src="Current%20Projects/Low_thrust_XTFC3.png" alt="Figure 3: Convergence & Optimization Performance" class="gallery-img" onclick="openCenterLightbox(this.src, this.alt)">
+                    <div class="img-caption">Figure 3: Convergence & Optimization Performance</div>
+                  </div>
+                </div>
+              </div>
             </div>
 
           </div>
