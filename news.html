@@ -4,7 +4,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>News | AIM Lab - NMSU</title>
-  <link rel="stylesheet" href="styles.css?v=1.3.0">
+  <link rel="stylesheet" href="styles.css?v=1.3.2">
+  <style>
+    .news-photo-grid {
+      display: flex;
+      gap: 14px;
+      margin-top: 14px;
+      flex-wrap: wrap;
+    }
+    .news-photo-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      border: 1px solid #cbd5e1;
+      background-color: #ffffff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      cursor: zoom-in;
+    }
+    .news-photo-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+    }
+    .news-img {
+      width: 280px;
+      height: 190px;
+      object-fit: cover;
+      display: block;
+    }
+    .news-photo-caption {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-align: center;
+      padding: 6px 8px;
+      background-color: #f8fafc;
+      font-weight: 600;
+      border-top: 1px solid #e2e8f0;
+    }
+  </style>
 </head>
 
 <body>
@@ -49,19 +86,66 @@
     <div class="section-container">
       <h2 class="section-title">News & Announcements</h2>
       <div class="section-divider"></div>
+      
       <ul class="info-list">
         <li>
           <strong style="color: var(--nmsu-crimson);">[2026.08]</strong> Prof. Sungmoon Choi joins NMSU MAE Department as Assistant Professor (Tenure-Track) and establishes the AIM Lab!
         </li>
+
         <li>
           <strong style="color: var(--nmsu-crimson);">[2026.06]</strong> New paper titled <em>"Vectorized dynamic-size genetic algorithm for rapid generation of optimal and suboptimal flyby sequences"</em> published in <strong>Astrodynamics</strong>.
         </li>
+
+        <!-- Spring 2026 Celebration Gathering & Graduation News -->
+        <li style="border-left: 4px solid var(--nmsu-crimson);">
+          <div style="font-size: 1.05rem; line-height: 1.6;">
+            <strong style="color: var(--nmsu-crimson);">[2026.05]</strong> <strong>Spring 2026 AIM Lab Gathering & Graduation Celebration! 🎉</strong>
+            <p style="margin-top: 6px; color: var(--text-main);">
+              AIM Lab gathered for lunch and coffee to celebrate the successful conclusion of the Spring 2026 semester! 
+              Huge congratulations to <strong>Dr. Sungmoon Choi</strong> on earning his Ph.D. in Aerospace Engineering, and to lab members <strong>Mingeun Park</strong> and <strong>Ethan Griesman</strong> on earning their B.S. degrees!
+            </p>
+            
+            <div class="news-photo-grid">
+              <div class="news-photo-item" onclick="openCenterLightbox('News/20260517_1.jpg', 'Spring 2026 AIM Lab Celebration Gathering')">
+                <img src="News/20260517_1.jpg" alt="Spring 2026 AIM Lab Gathering" class="news-img">
+                <div class="news-photo-caption">Spring 2026 Celebration Gathering</div>
+              </div>
+              <div class="news-photo-item" onclick="openCenterLightbox('News/20260517_2.jpg', 'AIM Lab Lunch & Coffee Gathering')">
+                <img src="News/20260517_2.jpg" alt="AIM Lab Coffee Gathering" class="news-img">
+                <div class="news-photo-caption">Lunch & Coffee Gathering</div>
+              </div>
+            </div>
+          </div>
+        </li>
+
         <li>
           <strong style="color: var(--nmsu-crimson);">[2026.05]</strong> New paper titled <em>"Ambiguity-Free Geometric Approach to Deep-Space Navigation Using Angles-Only Measurements"</em> published in <strong>Journal of Guidance, Control, and Dynamics (JGCD)</strong>.
         </li>
       </ul>
     </div>
   </main>
+
+  <!-- FIXED CENTER SCREEN LIGHTBOX OVERLAY -->
+  <div id="center-lightbox" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background-color:rgba(15,23,42,0.94);backdrop-filter:blur(10px);z-index:9999999;align-items:center;justify-content:center;flex-direction:column;padding:20px;box-sizing:border-box;overflow:auto;" onclick="closeCenterLightbox()">
+    <span style="position:absolute;top:20px;right:30px;color:#ffffff;font-size:48px;font-weight:bold;cursor:pointer;z-index:10000000;line-height:1;" onclick="closeCenterLightbox()">&times;</span>
+    <img id="center-lightbox-img" style="max-width:95vw;max-height:88vh;min-width:60vw;object-fit:contain;border-radius:12px;box-shadow:0 24px 60px rgba(0,0,0,0.7);background-color:#ffffff;padding:10px;" onclick="event.stopPropagation()">
+    <div id="center-lightbox-caption" style="margin-top:14px;text-align:center;color:#ffffff;font-family:'Outfit',sans-serif;font-size:1.2rem;font-weight:700;" onclick="event.stopPropagation()"></div>
+  </div>
+
+  <script>
+    function openCenterLightbox(src, captionText) {
+      var modal = document.getElementById('center-lightbox');
+      document.getElementById('center-lightbox-img').src = src;
+      document.getElementById('center-lightbox-caption').innerText = captionText || '';
+      modal.style.display = 'flex';
+    }
+    function closeCenterLightbox() {
+      document.getElementById('center-lightbox').style.display = 'none';
+    }
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeCenterLightbox();
+    });
+  </script>
 
 </body>
 </html>
