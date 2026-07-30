@@ -99,15 +99,46 @@
           </h3>
           <div style="display:flex;flex-direction:column;gap:20px;">
 
-            <!-- Project 1: RL Tour Design (no figures yet) -->
-            <div class="info-card" style="border-left:4px solid var(--nmsu-crimson);">
-              <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:14px;flex-wrap:wrap;">
-                <h4 style="font-family:'Outfit',sans-serif;font-size:1.35rem;color:var(--space-dark);margin-bottom:8px;">Reinforcement Learning for Tour Design</h4>
-                <span style="background-color:var(--nmsu-crimson-light);color:var(--nmsu-crimson);border:1px solid rgba(136,0,41,0.2);padding:4px 12px;border-radius:6px;font-size:0.85rem;font-weight:700;display:inline-flex;align-items:center;gap:6px;">🏛️ NASA JPL Collaboration</span>
+            <!-- Project 1: RL Tour Design -->
+            <div class="info-card expandable-card" style="border-left:4px solid var(--nmsu-crimson);">
+              <div style="display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;cursor:pointer;" class="project-header-toggle" data-toggle="rl-gallery">
+                <div style="display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;width:100%;">
+                  <h4 style="font-family:'Outfit',sans-serif;font-size:1.35rem;color:var(--space-dark);margin-bottom:0;">Reinforcement Learning for Tour Design</h4>
+                  <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+                    <span style="background-color:var(--nmsu-crimson-light);color:var(--nmsu-crimson);border:1px solid rgba(136,0,41,0.2);padding:4px 12px;border-radius:6px;font-size:0.85rem;font-weight:700;display:inline-flex;align-items:center;gap:6px;">🏛️ NASA JPL Collaboration</span>
+                    <button class="expand-btn">🖼️ View Project Figures (3) <span class="expand-arrow">▼</span></button>
+                  </div>
+                </div>
               </div>
-              <ul style="margin-left:20px;color:var(--text-main);font-size:1.05rem;line-height:1.6;margin-top:6px;">
+              <ul style="margin-left:20px;color:var(--text-main);font-size:1.05rem;line-height:1.6;margin-top:14px;">
                 <li>Developing tour design algorithms and contingency planning with trajectory reuse, in collaboration with NASA JPL</li>
               </ul>
+              <div class="expandable-gallery" id="rl-gallery">
+                <div class="gallery-grid">
+                  <div class="gallery-item">
+                    <img src="Current%20Projects/RL1.png" alt="Figure 1: Reinforcement Learning Tour Generation Framework" class="gallery-img" onclick="openCenterLightbox(this.src, this.alt)">
+                    <div class="img-caption">Figure 1: RL Tour Generation Framework</div>
+                  </div>
+                  <div class="gallery-item">
+                    <img src="Current%20Projects/RL2.png" alt="Figure 2: Contingency Planning & Trajectory Reuse" class="gallery-img" onclick="openCenterLightbox(this.src, this.alt)">
+                    <div class="img-caption">Figure 2: Contingency Planning & Trajectory Reuse</div>
+                  </div>
+                  <!-- Figure 3: Combined 2-subfigure panel -->
+                  <div class="gallery-item" style="cursor:zoom-in;" onclick="openMultiLightbox2(['Current%20Projects/RL3_1.png','Current%20Projects/RL3_2.png'], 'Figure 3: Tour Sequence & Trajectory Reuse Performance')">
+                    <div class="subfigure-panel" style="grid-template-columns: repeat(2, 1fr); pointer-events:none;">
+                      <div>
+                        <img src="Current%20Projects/RL3_1.png" alt="(a)">
+                        <div class="subfigure-label">(a)</div>
+                      </div>
+                      <div>
+                        <img src="Current%20Projects/RL3_2.png" alt="(b)">
+                        <div class="subfigure-label">(b)</div>
+                      </div>
+                    </div>
+                    <div class="img-caption">Figure 3: Tour Reuse Performance (click to enlarge all)</div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <!-- Project 2: Lambert ML -->
@@ -491,9 +522,26 @@
       document.getElementById('center-lightbox-img').style.display = 'none';
       var multi = document.getElementById('center-lightbox-multi');
       multi.style.display = 'flex';
+      document.getElementById('multi-img-a').style.display = 'block';
+      document.getElementById('multi-img-b').style.display = 'block';
+      document.getElementById('multi-img-c').style.display = 'block';
       document.getElementById('multi-img-a').src = srcArray[0] || '';
       document.getElementById('multi-img-b').src = srcArray[1] || '';
       document.getElementById('multi-img-c').src = srcArray[2] || '';
+      document.getElementById('center-lightbox-caption').innerText = captionText || '';
+      modal.style.display = 'flex';
+    }
+
+    function openMultiLightbox2(srcArray, captionText) {
+      var modal = document.getElementById('center-lightbox');
+      document.getElementById('center-lightbox-img').style.display = 'none';
+      var multi = document.getElementById('center-lightbox-multi');
+      multi.style.display = 'flex';
+      document.getElementById('multi-img-a').style.display = 'block';
+      document.getElementById('multi-img-b').style.display = 'block';
+      document.getElementById('multi-img-c').style.display = 'none';
+      document.getElementById('multi-img-a').src = srcArray[0] || '';
+      document.getElementById('multi-img-b').src = srcArray[1] || '';
       document.getElementById('center-lightbox-caption').innerText = captionText || '';
       modal.style.display = 'flex';
     }
