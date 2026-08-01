@@ -133,24 +133,24 @@ body {
 .lab-logo-link {
   display: flex;
   align-items: center;
+  gap: 16px;
   text-decoration: none;
   flex-shrink: 0;
 }
 
 .lab-logo-img {
-  height: 185px;
-  max-height: 230px;
+  height: 65px;
+  max-height: 75px;
   width: auto;
   display: block;
   object-fit: contain;
-  margin-top: -30px;
-  margin-bottom: -30px;
+  margin: 0;
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .lab-logo-link:hover .lab-logo-img {
   opacity: 0.96;
-  transform: scale(1.02);
+  transform: scale(1.03);
 }
 
 .lab-title-group {
@@ -162,19 +162,21 @@ body {
 .lab-title {
   font-family: 'Outfit', sans-serif;
   font-weight: 800;
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   color: var(--space-dark);
   letter-spacing: -0.5px;
-  line-height: 1.1;
+  line-height: 1.05;
+  margin: 0;
 }
 
 .lab-subtitle {
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  font-size: 1.1rem;
+  font-family: 'Outfit', 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 1.08rem;
   color: var(--nmsu-crimson);
   letter-spacing: -0.2px;
-  margin-top: 4px;
+  margin-top: 3px;
+  margin-bottom: 0;
 }
 
 /* Navigation Tabs (Far-Right Alignment, Wide Spacing, Crimson Font Color) */
