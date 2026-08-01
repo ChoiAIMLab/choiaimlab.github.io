@@ -114,10 +114,10 @@ body {
   top: 0;
   z-index: 1000;
   background-color: #ffffff;
-  border-bottom: 1px solid #e2e8f0;
-  padding: 10px 0;
+  border-bottom: 1px solid #cbd5e1;
+  padding: 24px 0;
   width: 100%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
 }
 
 .lab-container {
@@ -138,13 +138,12 @@ body {
 }
 
 .lab-logo-img {
-  height: 240px;
-  max-height: 280px;
+  height: 180px;
+  max-height: 220px;
   width: auto;
   display: block;
   object-fit: contain;
-  margin-top: -50px;
-  margin-bottom: -50px;
+  margin: 0;
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
