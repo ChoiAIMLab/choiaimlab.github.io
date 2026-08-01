@@ -114,10 +114,10 @@ body {
   top: 0;
   z-index: 1000;
   background-color: #ffffff;
-  border-bottom: 1px solid #cbd5e1;
+  border-bottom: 1px solid #e2e8f0;
   padding: 24px 0;
   width: 100%;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
 }
 
 .lab-container {
@@ -130,26 +130,30 @@ body {
   gap: 20px;
 }
 
-.lab-logo-link {
+.lab-title-group {
   display: flex;
-  align-items: center;
-  text-decoration: none;
+  flex-direction: column;
   flex-shrink: 0;
 }
 
-.lab-logo-img {
-  height: 180px;
-  max-height: 220px;
-  width: auto;
-  display: block;
-  object-fit: contain;
+.lab-title {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 2.8rem;
+  color: var(--space-dark);
+  letter-spacing: -0.5px;
+  line-height: 1.1;
   margin: 0;
-  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-.lab-logo-link:hover .lab-logo-img {
-  opacity: 0.96;
-  transform: scale(1.02);
+.lab-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--nmsu-crimson);
+  letter-spacing: -0.2px;
+  margin-top: 4px;
+  margin-bottom: 0;
 }
 
 .lab-title-group {
