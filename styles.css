@@ -115,7 +115,7 @@ body {
   z-index: 1000;
   background-color: #ffffff;
   border-bottom: 1px solid #e2e8f0;
-  padding: 10px 0;
+  padding: 22px 0;
   width: 100%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
 }
@@ -128,32 +128,6 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-}
-
-.lab-logo-link {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  flex-shrink: 0;
-  padding: 0;
-  margin: 0;
-  line-height: 1;
-}
-
-.lab-logo-img {
-  height: 75px;
-  max-height: 75px;
-  width: auto;
-  display: block;
-  object-fit: contain;
-  margin: 0;
-  padding: 0;
-  transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-.lab-logo-link:hover .lab-logo-img {
-  opacity: 0.96;
-  transform: scale(1.02);
 }
 
 .lab-title-group {
