@@ -130,6 +130,28 @@ body {
   gap: 20px;
 }
 
+.lab-logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.lab-logo-img {
+  height: 90px;
+  max-height: 110px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  margin: 0;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.lab-logo-link:hover .lab-logo-img {
+  opacity: 0.96;
+  transform: scale(1.02);
+}
+
 .lab-title-group {
   display: flex;
   flex-direction: column;
