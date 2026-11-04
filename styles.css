@@ -130,52 +130,51 @@ body {
   gap: 20px;
 }
 
-.lab-title-group {
+.lab-brand-link {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  color: inherit;
   flex-shrink: 0;
 }
 
-.lab-title {
-  font-family: 'Outfit', sans-serif;
-  font-weight: 800;
-  font-size: 2.8rem;
-  color: var(--space-dark);
-  letter-spacing: -0.5px;
-  line-height: 1.1;
-  margin: 0;
+.lab-brand-link:hover .lab-logo {
+  transform: scale(1.04);
 }
 
-.lab-subtitle {
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  font-size: 1.1rem;
+.lab-brand-link:hover .lab-title {
   color: var(--nmsu-crimson);
-  letter-spacing: -0.2px;
-  margin-top: 4px;
-  margin-bottom: 0;
+}
+
+.lab-logo {
+  height: 62px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  transition: transform 0.25s ease;
 }
 
 .lab-title-group {
   display: flex;
   flex-direction: column;
-  flex-shrink: 0;
 }
 
 .lab-title {
   font-family: 'Outfit', sans-serif;
   font-weight: 800;
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   color: var(--space-dark);
   letter-spacing: -0.5px;
   line-height: 1.05;
   margin: 0;
+  transition: color 0.2s ease;
 }
 
 .lab-subtitle {
   font-family: 'Outfit', 'Inter', sans-serif;
   font-weight: 700;
-  font-size: 1.08rem;
+  font-size: 1.05rem;
   color: var(--nmsu-crimson);
   letter-spacing: -0.2px;
   margin-top: 3px;
@@ -828,6 +827,18 @@ body {
 }
 
 @media (max-width: 768px) {
+  .lab-brand-link {
+    gap: 12px;
+  }
+  .lab-logo {
+    height: 50px;
+  }
+  .lab-title {
+    font-size: 2rem;
+  }
+  .lab-subtitle {
+    font-size: 0.92rem;
+  }
   .pi-profile-card {
     flex-direction: column;
     align-items: center;
@@ -835,6 +846,21 @@ body {
   .pi-photo {
     width: 200px;
     height: 250px;
+  }
+  .footer-container {
+    flex-direction: column;
+    gap: 32px;
+    padding: 0 24px;
+  }
+  .footer-columns {
+    gap: 32px;
+    width: 100%;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 20px 24px 0;
   }
 }
 
@@ -880,5 +906,133 @@ body {
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+/* 10. COMMON SITE FOOTER STYLING */
+.main-footer {
+  background-color: #ffffff;
+  border-top: 3px solid var(--nmsu-crimson);
+  padding: 48px 0 28px;
+  margin-top: 60px;
+  color: var(--text-main);
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.03);
+}
+
+.footer-container {
+  max-width: 1340px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 440px;
+}
+
+.footer-logo-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+}
+
+.footer-logo {
+  height: 52px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.25s ease;
+}
+
+.footer-logo-row:hover .footer-logo {
+  transform: scale(1.04);
+}
+
+.footer-brand-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--space-dark);
+  line-height: 1.1;
+}
+
+.footer-brand-sub {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--nmsu-crimson);
+}
+
+.footer-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.footer-columns {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-col-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--space-dark);
+  margin-bottom: 4px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.92rem;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--nmsu-crimson);
+  text-decoration: underline;
+}
+
+.footer-contact-item {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.footer-bottom {
+  max-width: 1340px;
+  margin: 35px auto 0;
+  padding: 22px 40px 0;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.86rem;
+  color: var(--text-muted);
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
